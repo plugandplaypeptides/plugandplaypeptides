@@ -280,10 +280,10 @@ export const homePage = () => (
           <div>
             <span class="label-caps block mb-4">The Opportunity</span>
             <h2 class="display-sans text-gray-900 mb-6" style="font-size:clamp(2.2rem,4vw,3.5rem);">
-              The peptide market<br />is<br /><span style="color:#16a34a">exploding.</span>
+              From weight loss, longevity,<br />recovery and performance —<br />the peptide market is <span style="color:#16a34a">exploding.</span>
             </h2>
             <p class="text-gray-800 text-lg leading-relaxed mb-6">
-              Millions of people are actively searching for peptides — for weight loss, anti-aging, recovery, and performance. They're buying from random online sources, often unsafely.
+              Millions of people are buying peptides online, oftentimes unsafely with no medical supervision.
             </p>
             <p class="text-gray-800 text-lg leading-relaxed font-medium mb-8">
               The brands and creators who get in now — with a physician-supervised, white-label platform — will own this space for the next decade.
