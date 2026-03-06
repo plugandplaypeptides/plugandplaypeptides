@@ -44,8 +44,8 @@ export const homePage = () => (
         {/* Headline block */}
         <div class="max-w-4xl mb-14">
           <p class="text-gray-900 text-xl font-medium mb-5" style="max-width:38rem; line-height:1.5;">
-            Your audience is already buying peptides. Just not from you.
-            <span class="text-green-600 font-semibold"> Until now.</span>
+            Your audience is already buying peptides.<br />
+            Just not from you. <em class="text-green-600 font-semibold">Until now...</em>
           </p>
           <h1 class="display-serif text-gray-900 mb-5" style="font-size:clamp(3.2rem,6.5vw,6rem); line-height:1.03;">
             All of the profit.<br />
