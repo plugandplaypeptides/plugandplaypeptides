@@ -43,13 +43,13 @@ export const homePage = () => (
 
         {/* Headline block */}
         <div class="max-w-4xl mb-14">
-          <p class="text-gray-900 text-xl font-medium mb-5" style="max-width:38rem; line-height:1.5;">
-            Your audience is already buying peptides.<br />
-            Just not from you. <em class="text-green-600 font-semibold">Until now...</em>
+          <p class="text-gray-700 text-lg font-semibold mb-4" style="letter-spacing:0.01em;">
+            All of the profit. <em style="color:#16a34a;">None of the headaches.</em>
           </p>
-          <h1 class="display-serif text-gray-900 mb-5" style="font-size:clamp(3.2rem,6.5vw,6rem); line-height:1.03;">
-            All of the profit.<br />
-            <em style="color:#16a34a;">None of the headaches.</em>
+          <h1 class="display-serif text-gray-900 mb-6" style="font-size:clamp(3.2rem,6.5vw,6rem); line-height:1.03;">
+            Your audience is already<br />
+            buying peptides.<br />
+            Just not from you. <em style="color:#16a34a;">Until now...</em>
           </h1>
           <p class="text-gray-700 text-xl" style="font-weight:400; max-width:36rem;">
             Launch your own physician-supervised peptide brand — effortlessly. We handle everything from compliance to fulfillment.
