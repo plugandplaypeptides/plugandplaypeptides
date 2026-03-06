@@ -278,7 +278,7 @@ export const homePage = () => (
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span class="label-caps block mb-4">From weight loss, longevity, recovery and performance...</span>
+            <span class="label-caps block mb-4">From weight loss, longevity, to recovery & performance...</span>
             <h2 class="display-sans text-gray-900 mb-6" style="font-size:clamp(2.2rem,4vw,3.5rem);">
               The peptide market<br />is <span style="color:#16a34a">exploding.</span>
             </h2>
