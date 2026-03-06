@@ -36,65 +36,180 @@ export const homePage = () => (
   <>
 
     {/* ═══════════════════════════════════
-        HERO — Full-bleed image, bold copy
+        HERO — Bold headline + benefit tabs
     ═══════════════════════════════════ */}
-    <section class="relative bg-black min-h-screen flex items-center overflow-hidden">
-      {/* Background image — portrait 4000×6000, man running, focus upper-center body */}
-      <div class="absolute inset-0">
-        <img
-          src={IMGS.heroAthlete}
-          alt="Athletic healthy lifestyle"
-          class="w-full h-full object-cover"
-          style="object-position: 60% 28%"
-        />
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-transparent"></div>
-      </div>
+    <section class="section-white pt-20 pb-0">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32">
-        <div class="max-w-2xl">
-          <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs font-semibold px-4 py-2 rounded-full mb-8 tracking-wide uppercase">
-            <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
-            Physician-Supervised · White-Label Ready · Launch in Weeks
-          </span>
-
-          <h1 class="display-serif text-white mb-6" style="font-size:clamp(3rem,6vw,5.5rem); line-height:1.05;">
-            Your audience<br />
-            is <em style="color:#4ade80;">already asking</em><br />
-            for this.
+        {/* Headline block */}
+        <div class="max-w-4xl mb-14">
+          <h1 class="display-serif text-gray-900 mb-5" style="font-size:clamp(3.2rem,6.5vw,6rem); line-height:1.03;">
+            All of the profit.<br />
+            <em style="color:#16a34a;">None of the headaches.</em>
           </h1>
-
-          <p class="text-gray-200 text-xl leading-relaxed mb-4 max-w-lg" style="font-weight:300;">
-            Peptides are the fastest-growing segment in health. Your brand could own a piece of it — legally, profitably, and in weeks.
+          <p class="text-gray-500 text-xl" style="font-weight:400; max-width:36rem;">
+            Launch your own physician-supervised peptide brand in weeks — zero upfront, zero compliance risk, zero staff needed.
           </p>
-          <p class="text-gray-400 text-base leading-relaxed mb-10 max-w-md">
-            We give businesses and creators the complete infrastructure to sell premium peptide products under their own brand — dispensed by licensed physicians, fulfilled direct to patients.
-          </p>
+        </div>
 
-          <div class="flex flex-col sm:flex-row gap-3">
-            <a href="/apply?type=business" class="btn-black text-base py-4 px-8">
-              Apply as a Business →
-            </a>
-            <a href="/apply?type=influencer" style="background:rgba(255,255,255,0.1);backdrop-filter:blur(8px);border:1.5px solid rgba(255,255,255,0.3);color:#fff;" class="btn-black text-base py-4 px-8">
-              Apply as a Creator →
-            </a>
-          </div>
-
-          {/* Micro-stats */}
-          <div class="flex flex-wrap gap-8 mt-12 pt-10 border-t border-white/10">
+        {/* Benefit tabs — Hims-style */}
+        <div class="border-b border-gray-200 mb-0">
+          <div class="flex gap-0 overflow-x-auto" id="hero-tabs" style="scrollbar-width:none;">
             {[
-              { n: '50+', l: 'Active Partner Brands' },
-              { n: '$0', l: 'Upfront to Launch' },
-              { n: '2–4 wks', l: 'Average Time to Revenue' },
-            ].map(s => (
-              <div>
-                <div class="text-white font-extrabold text-2xl leading-none" style="letter-spacing:-0.03em;">{s.n}</div>
-                <div class="text-gray-400 text-sm mt-1">{s.l}</div>
-              </div>
+              { id: 0, label: 'Your own brand' },
+              { id: 1, label: 'Physician network' },
+              { id: 2, label: '$0 to start' },
+              { id: 3, label: 'For businesses' },
+              { id: 4, label: 'For creators' },
+            ].map(tab => (
+              <button
+                class="hero-tab flex-shrink-0 px-6 py-4 text-sm font-semibold text-gray-400 border-b-2 border-transparent transition-colors whitespace-nowrap hover:text-gray-900"
+                id={`tab-btn-${tab.id}`}
+                onclick={`switchTab(${tab.id})`}
+              >
+                {tab.label}
+              </button>
             ))}
           </div>
         </div>
+
+        {/* Tab panels */}
+        <div class="relative" style="min-height:420px;">
+
+          {/* Tab 0 — Your own brand */}
+          <div class="hero-panel grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-14" id="panel-0">
+            <div>
+              <span class="label-caps block mb-4">White-Label, Fully Yours</span>
+              <h2 class="display-sans text-gray-900 mb-4" style="font-size:clamp(1.8rem,3.5vw,2.6rem);">
+                Your logo.<br />Your name.<br />Your patients.
+              </h2>
+              <p class="text-gray-500 text-lg leading-relaxed mb-8">
+                Every touchpoint — packaging, patient portal, order emails — carries your brand. Your customers never see our name.
+              </p>
+              <a href="/apply" class="btn-black">Get Started →</a>
+            </div>
+            <div class="rounded-3xl overflow-hidden h-80 lg:h-96">
+              <img
+                src={IMGS.medSpa}
+                alt="Branded wellness clinic"
+                class="w-full h-full object-cover"
+                style="object-position:50% 50%"
+              />
+            </div>
+          </div>
+
+          {/* Tab 1 — Physician network */}
+          <div class="hero-panel hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-14" id="panel-1">
+            <div>
+              <span class="label-caps block mb-4">Real Medicine. Real Doctors.</span>
+              <h2 class="display-sans text-gray-900 mb-4" style="font-size:clamp(1.8rem,3.5vw,2.6rem);">
+                Board-certified<br />physicians in<br />all 50 states.
+              </h2>
+              <p class="text-gray-500 text-lg leading-relaxed mb-8">
+                Every patient gets a real consultation. Our physicians review health history, write valid prescriptions, and monitor outcomes. You never touch the clinical side.
+              </p>
+              <a href="/apply" class="btn-black">Get Started →</a>
+            </div>
+            <div class="rounded-3xl overflow-hidden h-80 lg:h-96">
+              <img
+                src={IMGS.doctorFemale}
+                alt="Board-certified physician"
+                class="w-full h-full object-cover"
+                style="object-position:50% 22%"
+              />
+            </div>
+          </div>
+
+          {/* Tab 2 — $0 to start */}
+          <div class="hero-panel hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-14" id="panel-2">
+            <div>
+              <span class="label-caps block mb-4">Zero Upfront Cost</span>
+              <h2 class="display-sans text-gray-900 mb-4" style="font-size:clamp(1.8rem,3.5vw,2.6rem);">
+                No setup fees.<br />No inventory.<br />No minimums.
+              </h2>
+              <p class="text-gray-500 text-lg leading-relaxed mb-8">
+                We make money when you make money. Brand build-out, physician onboarding, portal setup — all included. You start earning before you spend a dollar.
+              </p>
+              <a href="/apply" class="btn-black">Get Started →</a>
+            </div>
+            <div class="rounded-3xl overflow-hidden h-80 lg:h-96">
+              <img
+                src={IMGS.doctorTelehealth}
+                alt="Easy setup process"
+                class="w-full h-full object-cover"
+                style="object-position:45% 28%"
+              />
+            </div>
+          </div>
+
+          {/* Tab 3 — For businesses */}
+          <div class="hero-panel hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-14" id="panel-3">
+            <div>
+              <span class="label-caps block mb-4">Med Spas · Clinics · Wellness Brands</span>
+              <h2 class="display-sans text-gray-900 mb-4" style="font-size:clamp(1.8rem,3.5vw,2.6rem);">
+                Add $40K–$100K+<br />monthly without<br />hiring anyone.
+              </h2>
+              <p class="text-gray-500 text-lg leading-relaxed mb-8">
+                Plug a peptide revenue line into your existing business. Your patients buy under your brand — we handle everything behind the scenes.
+              </p>
+              <a href="/apply?type=business" class="btn-black">Apply as a Business →</a>
+            </div>
+            <div class="rounded-3xl overflow-hidden h-80 lg:h-96">
+              <img
+                src={IMGS.coupleJog}
+                alt="Successful wellness business"
+                class="w-full h-full object-cover"
+                style="object-position:50% 30%"
+              />
+            </div>
+          </div>
+
+          {/* Tab 4 — For creators */}
+          <div class="hero-panel hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-14" id="panel-4">
+            <div>
+              <span class="label-caps block mb-4">Influencers · Coaches · Content Creators</span>
+              <h2 class="display-sans text-gray-900 mb-4" style="font-size:clamp(1.8rem,3.5vw,2.6rem);">
+                Stop building<br />someone else's brand<br />with your audience.
+              </h2>
+              <p class="text-gray-500 text-lg leading-relaxed mb-8">
+                Your followers trust you. Turn that trust into recurring revenue with your own peptide line — doctor-prescribed, shipped direct, branded as you.
+              </p>
+              <a href="/apply?type=influencer" class="btn-black">Apply as a Creator →</a>
+            </div>
+            <div class="rounded-3xl overflow-hidden h-80 lg:h-96">
+              <img
+                src={IMGS.creatorWoman}
+                alt="Content creator with own brand"
+                class="w-full h-full object-cover"
+                style="object-position:50% 18%"
+              />
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
+
+    <script dangerouslySetInnerHTML={{ __html: `
+      // Hero tab switcher
+      function switchTab(id) {
+        // Hide all panels
+        document.querySelectorAll('.hero-panel').forEach(p => p.classList.add('hidden'));
+        // Deactivate all tab buttons
+        document.querySelectorAll('.hero-tab').forEach(b => {
+          b.classList.remove('text-gray-900','border-gray-900');
+          b.classList.add('text-gray-400','border-transparent');
+        });
+        // Show selected panel
+        document.getElementById('panel-' + id).classList.remove('hidden');
+        // Activate selected tab button
+        const btn = document.getElementById('tab-btn-' + id);
+        btn.classList.remove('text-gray-400','border-transparent');
+        btn.classList.add('text-gray-900','border-gray-900');
+      }
+      // Init first tab as active
+      switchTab(0);
+    ` }} />
 
     {/* ═══════════════════════════════════
         SOCIAL PROOF TICKER
@@ -105,7 +220,7 @@ export const homePage = () => (
           {[
             '✦  50+ Active Partner Brands',
             '✦  Physician Network in All 50 States',
-            '✦  $0 Upfront to Launch',
+            '✦  Launch Effortlessly',
             '✦  Your Logo. Your Brand. Your Revenue.',
             '✦  Average Partner Earns $22K in Month 1',
             '✦  Licensed Compounding Pharmacies',
@@ -113,7 +228,7 @@ export const homePage = () => (
             '✦  2–4 Week Launch Guarantee',
             '✦  50+ Active Partner Brands',
             '✦  Physician Network in All 50 States',
-            '✦  $0 Upfront to Launch',
+            '✦  Launch Effortlessly',
             '✦  Your Logo. Your Brand. Your Revenue.',
             '✦  Average Partner Earns $22K in Month 1',
             '✦  Licensed Compounding Pharmacies',
@@ -707,10 +822,8 @@ export const homePage = () => (
         const body = document.getElementById('faq-body-' + i);
         const icon = document.getElementById('faq-icon-' + i);
         const isOpen = !body.classList.contains('hidden');
-        // Close all
         document.querySelectorAll('.faq-body').forEach(el => el.classList.add('hidden'));
         document.querySelectorAll('.faq-icon').forEach(el => el.textContent = '+');
-        // Open clicked if was closed
         if (!isOpen) {
           body.classList.remove('hidden');
           icon.textContent = '−';
