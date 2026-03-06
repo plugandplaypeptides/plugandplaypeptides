@@ -47,11 +47,38 @@ export const homePage = () => (
             All of the profit. <em style="color:#16a34a;">None of the headaches.</em>
           </p>
           <h1 class="display-serif text-gray-900 mb-6" style="font-size:clamp(3.2rem,6.5vw,6rem); line-height:1.03;">
-            Your audience is already<br />
+            Your <span id="rotating-word" style="display:inline-block; min-width:3ch;">patients</span> are already<br />
             buying peptides.<br />
             Just not from you.<br />
             <em style="color:#16a34a;">Until now...</em>
           </h1>
+
+          <script dangerouslySetInnerHTML={{ __html: `
+            (function() {
+              const words = ['patients', 'followers', 'clients', 'members'];
+              let index = 0;
+              const el = document.getElementById('rotating-word');
+              if (!el) return;
+              setInterval(function() {
+                el.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(-8px)';
+                setTimeout(function() {
+                  index = (index + 1) % words.length;
+                  el.textContent = words[index];
+                  el.style.transform = 'translateY(8px)';
+                  el.style.opacity = '0';
+                  requestAnimationFrame(function() {
+                    requestAnimationFrame(function() {
+                      el.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+                      el.style.opacity = '1';
+                      el.style.transform = 'translateY(0)';
+                    });
+                  });
+                }, 350);
+              }, 2200);
+            })();
+          ` }} />
           <p class="text-gray-700 text-xl" style="font-weight:400; max-width:36rem;">
             Launch your own physician-supervised peptide brand — effortlessly. We handle everything from compliance to fulfillment.
           </p>
