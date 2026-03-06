@@ -55,7 +55,7 @@ export const homePage = () => (
 
           <script dangerouslySetInnerHTML={{ __html: `
             (function() {
-              const words = ['patients', 'followers', 'clients', 'members'];
+              const words = ['patients', 'followers', 'members'];
               let index = 0;
               const el = document.getElementById('rotating-word');
               if (!el) return;
