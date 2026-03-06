@@ -282,14 +282,11 @@ export const homePage = () => (
             <h2 class="display-sans text-gray-900 mb-6" style="font-size:clamp(2.2rem,4vw,3.5rem);">
               The peptide market<br />is <span style="color:#16a34a">exploding.</span>
             </h2>
-            <p class="text-gray-800 text-lg leading-relaxed mb-6">
+            <p class="text-gray-800 text-lg leading-relaxed mb-8">
               Millions of people are buying peptides online, oftentimes unsafely with no medical supervision.
             </p>
-            <p class="text-gray-800 text-lg leading-relaxed font-medium mb-8">
-              The brands and creators who get in now — with a physician-supervised, white-label platform — will own this space for the next decade.
-            </p>
 
-            <div class="space-y-4">
+            <div class="space-y-4 mb-8">
               {[
                 { stat: '$8.4B', label: 'Peptide therapeutics market by 2028' },
                 { stat: '340%', label: 'Increase in peptide searches 2022–2025' },
@@ -301,6 +298,10 @@ export const homePage = () => (
                 </div>
               ))}
             </div>
+
+            <p class="text-gray-800 text-lg leading-relaxed font-medium">
+              The brands and creators who get in now — with a physician-supervised, white-label platform — will own this space for the next decade.
+            </p>
           </div>
 
           {/* Image collage */}
