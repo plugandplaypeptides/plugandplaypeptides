@@ -88,7 +88,7 @@ export const homePage = () => (
         <div class="border-b border-gray-200 mb-0">
           <div class="flex gap-0 overflow-x-auto" id="hero-tabs" style="scrollbar-width:none;">
             {[
-              { id: 0, label: 'Your own brand' },
+              { id: 0, label: 'Your own company' },
               { id: 1, label: 'Physician network' },
               { id: 2, label: 'Effortless launch' },
               { id: 3, label: 'For businesses' },
