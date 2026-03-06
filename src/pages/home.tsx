@@ -43,12 +43,16 @@ export const homePage = () => (
 
         {/* Headline block */}
         <div class="max-w-4xl mb-14">
+          <p class="text-gray-900 text-xl font-medium mb-5" style="max-width:38rem; line-height:1.5;">
+            Your audience is already buying peptides. Just not from you.
+            <span class="text-green-600 font-semibold"> Until now.</span>
+          </p>
           <h1 class="display-serif text-gray-900 mb-5" style="font-size:clamp(3.2rem,6.5vw,6rem); line-height:1.03;">
             All of the profit.<br />
             <em style="color:#16a34a;">None of the headaches.</em>
           </h1>
-          <p class="text-gray-500 text-xl" style="font-weight:400; max-width:36rem;">
-            Launch your own physician-supervised peptide brand in weeks — zero upfront, zero compliance risk, zero staff needed.
+          <p class="text-gray-700 text-xl" style="font-weight:400; max-width:36rem;">
+            Launch your own physician-supervised peptide brand — effortlessly. We handle everything from compliance to fulfillment.
           </p>
         </div>
 
@@ -58,7 +62,7 @@ export const homePage = () => (
             {[
               { id: 0, label: 'Your own brand' },
               { id: 1, label: 'Physician network' },
-              { id: 2, label: '$0 to start' },
+              { id: 2, label: 'Effortless launch' },
               { id: 3, label: 'For businesses' },
               { id: 4, label: 'For creators' },
             ].map(tab => (
@@ -83,7 +87,7 @@ export const homePage = () => (
               <h2 class="display-sans text-gray-900 mb-4" style="font-size:clamp(1.8rem,3.5vw,2.6rem);">
                 Your logo.<br />Your name.<br />Your patients.
               </h2>
-              <p class="text-gray-500 text-lg leading-relaxed mb-8">
+              <p class="text-gray-700 text-lg leading-relaxed mb-8">
                 Every touchpoint — packaging, patient portal, order emails — carries your brand. Your customers never see our name.
               </p>
               <a href="/apply" class="btn-black">Get Started →</a>
@@ -105,7 +109,7 @@ export const homePage = () => (
               <h2 class="display-sans text-gray-900 mb-4" style="font-size:clamp(1.8rem,3.5vw,2.6rem);">
                 Board-certified<br />physicians in<br />all 50 states.
               </h2>
-              <p class="text-gray-500 text-lg leading-relaxed mb-8">
+              <p class="text-gray-700 text-lg leading-relaxed mb-8">
                 Every patient gets a real consultation. Our physicians review health history, write valid prescriptions, and monitor outcomes. You never touch the clinical side.
               </p>
               <a href="/apply" class="btn-black">Get Started →</a>
@@ -120,15 +124,15 @@ export const homePage = () => (
             </div>
           </div>
 
-          {/* Tab 2 — $0 to start */}
+          {/* Tab 2 — Effortless launch */}
           <div class="hero-panel hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-14" id="panel-2">
             <div>
-              <span class="label-caps block mb-4">Zero Upfront Cost</span>
+              <span class="label-caps block mb-4">Plug & Play — Literally</span>
               <h2 class="display-sans text-gray-900 mb-4" style="font-size:clamp(1.8rem,3.5vw,2.6rem);">
-                No setup fees.<br />No inventory.<br />No minimums.
+                Live in weeks.<br />Not months.<br />Not years.
               </h2>
-              <p class="text-gray-500 text-lg leading-relaxed mb-8">
-                We make money when you make money. Brand build-out, physician onboarding, portal setup — all included. You start earning before you spend a dollar.
+              <p class="text-gray-700 text-lg leading-relaxed mb-8">
+                Brand build-out, physician onboarding, patient portal, fulfillment setup — all done for you. You focus on your audience. We handle everything else.
               </p>
               <a href="/apply" class="btn-black">Get Started →</a>
             </div>
@@ -147,9 +151,9 @@ export const homePage = () => (
             <div>
               <span class="label-caps block mb-4">Med Spas · Clinics · Wellness Brands</span>
               <h2 class="display-sans text-gray-900 mb-4" style="font-size:clamp(1.8rem,3.5vw,2.6rem);">
-                Add $40K–$100K+<br />monthly without<br />hiring anyone.
+                A new revenue line.<br />No new staff.<br />No new overhead.
               </h2>
-              <p class="text-gray-500 text-lg leading-relaxed mb-8">
+              <p class="text-gray-700 text-lg leading-relaxed mb-8">
                 Plug a peptide revenue line into your existing business. Your patients buy under your brand — we handle everything behind the scenes.
               </p>
               <a href="/apply?type=business" class="btn-black">Apply as a Business →</a>
@@ -171,7 +175,7 @@ export const homePage = () => (
               <h2 class="display-sans text-gray-900 mb-4" style="font-size:clamp(1.8rem,3.5vw,2.6rem);">
                 Stop building<br />someone else's brand<br />with your audience.
               </h2>
-              <p class="text-gray-500 text-lg leading-relaxed mb-8">
+              <p class="text-gray-700 text-lg leading-relaxed mb-8">
                 Your followers trust you. Turn that trust into recurring revenue with your own peptide line — doctor-prescribed, shipped direct, branded as you.
               </p>
               <a href="/apply?type=influencer" class="btn-black">Apply as a Creator →</a>
@@ -250,7 +254,7 @@ export const homePage = () => (
             <h2 class="display-sans text-gray-900 mb-6" style="font-size:clamp(2.2rem,4vw,3.5rem);">
               The peptide market<br />is at an<br /><span style="color:#16a34a">inflection point.</span>
             </h2>
-            <p class="text-gray-600 text-lg leading-relaxed mb-6">
+            <p class="text-gray-800 text-lg leading-relaxed mb-6">
               Millions of people are actively searching for peptides — for weight loss, anti-aging, recovery, and performance. They're buying from random online sources, often unsafely.
             </p>
             <p class="text-gray-800 text-lg leading-relaxed font-medium mb-8">
@@ -265,7 +269,7 @@ export const homePage = () => (
               ].map(s => (
                 <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100">
                   <span class="text-2xl font-extrabold text-green-600" style="letter-spacing:-0.03em;">{s.stat}</span>
-                  <span class="text-gray-600 text-sm">{s.label}</span>
+                  <span class="text-gray-800 text-sm">{s.label}</span>
                 </div>
               ))}
             </div>
@@ -341,7 +345,7 @@ export const homePage = () => (
             <h2 class="display-sans text-gray-900 mb-4" style="font-size:clamp(2rem,4vw,3rem);">
               Add $40K–$100K+<br />in recurring monthly<br />revenue. Without<br />hiring anyone.
             </h2>
-            <p class="text-gray-500 text-lg leading-relaxed mb-8">
+            <p class="text-gray-800 text-lg leading-relaxed mb-8">
               Your business already has the audience and the trust. We add the peptide line — branded as yours, prescribed by our physicians, shipped direct to your patients. You collect the margin.
             </p>
 
@@ -356,7 +360,7 @@ export const homePage = () => (
                   <span class="text-xl flex-shrink-0">{f.icon}</span>
                   <div>
                     <p class="font-semibold text-gray-900 text-sm mb-0.5">{f.title}</p>
-                    <p class="text-gray-500 text-sm leading-relaxed">{f.body}</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">{f.body}</p>
                   </div>
                 </div>
               ))}
@@ -384,7 +388,7 @@ export const homePage = () => (
             <h2 class="display-sans text-gray-900 mb-4" style="font-size:clamp(2rem,4vw,3rem);">
               Stop making<br />someone else rich<br />with your audience.
             </h2>
-            <p class="text-gray-500 text-lg leading-relaxed mb-4">
+            <p class="text-gray-800 text-lg leading-relaxed mb-4">
               Every time you post an affiliate link, you're building <em>their</em> brand with <em>your</em> credibility. Your audience already trusts you on health — why aren't you capturing that value?
             </p>
             <p class="text-gray-800 font-semibold text-lg leading-relaxed mb-8">
@@ -403,7 +407,7 @@ export const homePage = () => (
                 ].map(r => (
                   <div>
                     <div class="flex justify-between text-sm mb-1">
-                      <span class="text-gray-500">{r.tier}</span>
+                      <span class="text-gray-700">{r.tier}</span>
                       <span class="font-bold text-gray-900">{r.mo}</span>
                     </div>
                     <div class="w-full bg-gray-200 rounded-full h-1.5">
@@ -445,7 +449,7 @@ export const homePage = () => (
             <div class="col-span-2 bg-black rounded-2xl p-5">
               <div class="flex mb-2">{[1,2,3,4,5].map(() => <span class="text-amber-400 mr-0.5">★</span>)}</div>
               <p class="text-white text-sm leading-relaxed italic mb-3">"First month I did $22K. My audience was already asking for this — Plug & Play just made it real."</p>
-              <p class="text-gray-500 text-xs">Alex M. · Fitness Creator · 800K followers</p>
+              <p class="text-gray-600 text-xs">Alex M. · Fitness Creator · 800K followers</p>
             </div>
           </div>
         </div>
@@ -462,7 +466,7 @@ export const homePage = () => (
           <h2 class="display-sans text-gray-900 mb-4" style="font-size:clamp(2rem,4vw,3.25rem);">
             From zero to revenue<br />in four steps.
           </h2>
-          <p class="text-gray-500 text-lg">No lab. No compliance team. No prior medical experience needed.</p>
+          <p class="text-gray-800 text-lg">No lab. No compliance team. No prior medical experience needed.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
@@ -476,7 +480,7 @@ export const homePage = () => (
               <div class="step-num absolute top-2 right-3 pointer-events-none select-none">{step.n}</div>
               <div class="text-3xl mb-4 relative z-10">{step.emoji}</div>
               <h3 class="font-bold text-gray-900 text-base mb-3 relative z-10 leading-snug">{step.title}</h3>
-              <p class="text-gray-500 text-sm leading-relaxed relative z-10">{step.body}</p>
+              <p class="text-gray-700 text-sm leading-relaxed relative z-10">{step.body}</p>
             </div>
           ))}
         </div>
@@ -485,7 +489,7 @@ export const homePage = () => (
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center bg-white rounded-3xl p-8 border border-gray-100">
           <div>
             <h3 class="font-bold text-gray-900 text-2xl mb-3 leading-tight">Our physicians are board-certified specialists — not a rubber stamp.</h3>
-            <p class="text-gray-500 leading-relaxed mb-4">Every patient consultation is reviewed by a licensed physician in our network. They evaluate health history, write real prescriptions, and monitor outcomes. This is real medicine — done right.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Every patient consultation is reviewed by a licensed physician in our network. They evaluate health history, write real prescriptions, and monitor outcomes. This is real medicine — done right.</p>
             <div class="flex flex-wrap gap-2">
               {['Endocrinology', 'Internal Medicine', 'Sports Medicine', 'Anti-Aging / Longevity', 'Weight Management'].map(s => (
                 <span class="tag-gray">{s}</span>
@@ -566,7 +570,7 @@ export const homePage = () => (
                 <span class={`inline-flex items-center gap-1 text-xs font-semibold px-3 py-1 rounded-full border mb-3 ${cat.badgeBg}`}>{cat.badge}</span>
                 <h3 class="font-bold text-gray-900 text-lg mb-1">{cat.name}</h3>
                 <p class="text-green-600 text-sm font-medium mb-3">{cat.products}</p>
-                <p class="text-gray-500 text-sm leading-relaxed">{cat.desc}</p>
+                <p class="text-gray-700 text-sm leading-relaxed">{cat.desc}</p>
               </div>
             </div>
           ))}
@@ -576,7 +580,7 @@ export const homePage = () => (
         <div class="bg-gray-50 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4 border border-gray-100">
           <div>
             <p class="font-semibold text-gray-900 mb-1">Plus 9 more compounds in the full catalog</p>
-            <p class="text-gray-500 text-sm">PT-141 · Melanotan II · Thymosin Alpha-1 · Ipamorelin · MOTS-c · and more. New compounds added quarterly.</p>
+            <p class="text-gray-700 text-sm">PT-141 · Melanotan II · Thymosin Alpha-1 · Ipamorelin · MOTS-c · and more. New compounds added quarterly.</p>
           </div>
           <a href="/apply" class="btn-outline-black flex-shrink-0">Request Full Catalog</a>
         </div>
@@ -608,7 +612,7 @@ export const homePage = () => (
                   <span class="text-xl flex-shrink-0">{f.icon}</span>
                   <div>
                     <p class="font-semibold text-white text-sm mb-0.5">{f.title}</p>
-                    <p class="text-gray-500 text-sm leading-relaxed">{f.body}</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">{f.body}</p>
                   </div>
                 </div>
               ))}
@@ -653,7 +657,7 @@ export const homePage = () => (
           <h2 class="display-sans text-gray-900 mb-4" style="font-size:clamp(2rem,4vw,3rem);">
             Real people.<br />Real revenue.
           </h2>
-          <p class="text-gray-500">Here's what partners say after launching their brands with us.</p>
+          <p class="text-gray-700">Here's what partners say after launching their brands with us.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -762,7 +766,7 @@ export const homePage = () => (
                 <span class="faq-icon text-gray-400 text-lg flex-shrink-0 ml-4" id={`faq-icon-${i}`}>+</span>
               </button>
               <div class="faq-body hidden px-5 pb-5" id={`faq-body-${i}`}>
-                <p class="text-gray-500 text-sm leading-relaxed">{faq.a}</p>
+                <p class="text-gray-700 text-sm leading-relaxed">{faq.a}</p>
               </div>
             </div>
           ))}
@@ -806,7 +810,7 @@ export const homePage = () => (
             I'm a Creator — Apply Now
           </a>
         </div>
-        <p class="text-gray-600 text-sm">
+        <p class="text-gray-800 text-sm">
           <i class="fas fa-lock text-xs mr-1"></i>5-minute application · 100% confidential · No commitment
         </p>
       </div>
