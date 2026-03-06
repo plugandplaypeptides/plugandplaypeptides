@@ -1,24 +1,34 @@
 // All image URLs sourced from image_search tool (license-filtered)
 const IMGS = {
-  // Hero — athletic man running outdoors
+  // Hero — athletic man running on rooftop in Austin (4000×6000 portrait)
+  // Subject: man running, head/body centered horizontally, upper-mid vertically
   heroAthlete: 'https://sspark.genspark.ai/cfimages?u1=ZdowuU602ahWL4IcSs5hMShhG1QbJ0YZFvtHBh32Mec03d0%2BmXNE2Wtxv7tw3HV1UhItixvyFrDuzKnV%2FhFmgIubCydpsDvWB9v0C%2BlqZvjxhJj8Xjngy%2FmV49P4970zhsOAzUDsp18Jx%2BuceLgVCk7ZCJh4NUEzvPLYIAfLJceksLMCCo9CLAJYRic%3D&u2=eVUZt9TGwAzZCnnY&width=2560',
-  // Happy couple jogging
+  // Happy couple jogging — smiling man & woman (6000×4000 landscape)
+  // Subjects centered horizontally at ~50%, faces at ~35% from top
   coupleJog: 'https://sspark.genspark.ai/cfimages?u1=YlOOMyA3N8i%2Fzj2uekkQlVklXzjPq%2FRgVZj7zL66tQqaHoTOrVNGatm3go3W7h2MjW9tzBwMJoCB%2BJ%2FeQuCK6m8kAx1eO%2FW%2B9qnTC%2BxDHPtxuA%3D%3D&u2=R03jZHwAEMg8fKLz&width=2560',
-  // Female creator recording video
+  // Female creator recording video on phone (portrait ~4480×6720)
+  // Subject: woman with phone, face at ~20% from top, centered horizontally
   creatorWoman: 'https://sspark.genspark.ai/cfimages?u1=eEf1KxscPQXV%2F5SIVb3w%2Fw4Leotk6%2BFuY7muE%2FOBwq9u%2F6qrJDvVjLLl4o8AfV4tB4OnpkT25hJ0zFh6nYOuYKfwJvoucjpKCZbzi5b5LUEOGg%3D%3D&u2=mbVXo%2BVqexsSj1jC&width=2560',
-  // Male creator filming
+  // Male creator filming on phone (portrait ~4328×6492)
+  // Subject: man filming, face at ~18% from top, centered horizontally
   creatorMan: 'https://sspark.genspark.ai/cfimages?u1=JSOQyYk%2FBbS8csUbiHaKTp7ZCjTUS7%2BStjkgBvW6gnWxyqHI9M%2Bd6AwcP6i2HcQnBvHP2snAPfAaeYtmkYbcaF66ubWJqNjEuoojEDsdnjM%2BUA%3D%3D&u2=tQGTQJ7ot9JtaMYS&width=2560',
-  // Doctor telehealth video call
+  // Doctor using a laptop (telehealth) (6720×4480 landscape)
+  // Subject: doctor centered at ~45% horizontal, face/upper body at ~30% from top
   doctorTelehealth: 'https://sspark.genspark.ai/cfimages?u1=BQnS04fN7YRxdMstKz5TMSAI7yp58IQbp6Z29nFozDsFIZRvHukIF7XjbxrUJPv7muoQZ85kw65Vcux5rFX%2FgYJQA5N2s8sIKf%2F8wAo%2Fh1Hq5w%3D%3D&u2=tC9P5GGTcIYRSP1J&width=2560',
-  // Female doctor video call
+  // Female doctor having a video call (portrait 4480×6720)
+  // Subject: doctor's face/upper body, centered horizontally, face at ~22% from top
   doctorFemale: 'https://sspark.genspark.ai/cfimages?u1=Hoin65eiqZ0oMAQoq5ABA7X9Bn%2B4t8e%2BDh%2FyipUGJFMXaZt92nNxqUBXBBVk6rz3Oykuqzeqei4KynA6BDmovBVaKptcG%2BZediiNfHeeVCHaGg%3D%3D&u2=s695TUWMqzau4tWq&width=2560',
-  // Med spa interior
+  // Med spa interior (landscape ~4792×3194)
+  // Subject: room interior, naturally centered — center center
   medSpa: 'https://sspark.genspark.ai/cfimages?u1=tuHgjNrdFR%2BvpEL0pv%2Bdgh7o321cO0mSUNSAiD3XrCWwwCVHWeBz7GKP%2BVVer034Pe7y1FQNcsxhB8NVV63PUd5zIWGtdXg4ldL24YWsVtva0DX1G9yDc5bpjX8fn8ERJj7qgbDBVYW5AvPE1a6RGIYVz2Cz0VmyVyUFu2cVb4y57hkbv4UFvvefxg%3D%3D&u2=IhmJUJyZEm8nfDoS&width=2560',
-  // Smiling woman wellness
+  // Smiling woman (3510×5260 portrait)
+  // Subject: woman's face/smile, centered horizontally, face at ~18% from top
   womanSmiling: 'https://sspark.genspark.ai/cfimages?u1=2jjgGW47VW50pEzJKshJj1lQ7pg8Re3i%2Fqs8tu6JDS6zWgK470LMao%2FAUH8SVQExMG0XIBGxOwYG14%2BuxQZgE1j%2BOKRi01z4u66ms8FF9o0fXA%3D%3D&u2=ABarFACbt16CiY8J&width=2560',
-  // Couple sportswear active
+  // Couple in sportswear (3832×5745 portrait)
+  // Subject: two people full body, centered horizontally, faces at ~15% from top
   coupleSport: 'https://sspark.genspark.ai/cfimages?u1=nDjtvHtqLJc9YeJ2rjT4gfB0Ufr1jgGgfRfbKjXcdd246hUJTW938KPZE%2F%2B49Ak0%2BqGP41I40AcFckX4Q7ZqdOHcsqUfKRlyZbgVfYqTb4BCwhnerbY%2FxBwCigw5kqgLxMpHERrFAraaINNrdakgXagFB4rDqUI%3D&u2=K3DVyzlSrZh6uQlR&width=2560',
-  // Man filming on tripod
+  // Man filming on tripod (5720×3818 landscape)
+  // Subject: man centered in frame, upper body at ~35% from top
   influencerTripod: 'https://sspark.genspark.ai/cfimages?u1=AY73JZRcY7b6B7AYxKvRKi62CmryShXlDLZmd90HmUtx2s1PboS8%2F8znwZ7CR5pBwwHsc7N%2Ft5p6%2BbO9i5rNYNfDzGs5AW3WbN1GD%2B40cugjTQ%3D%3D&u2=WZphExal%2BUAfUfRl&width=2560',
 }
 
@@ -29,10 +39,15 @@ export const homePage = () => (
         HERO — Full-bleed image, bold copy
     ═══════════════════════════════════ */}
     <section class="relative bg-black min-h-screen flex items-center overflow-hidden">
-      {/* Background image */}
+      {/* Background image — portrait 4000×6000, man running, focus upper-center body */}
       <div class="absolute inset-0">
-        <img src={IMGS.heroAthlete} alt="Athletic healthy lifestyle" class="w-full h-full object-cover object-center opacity-50" />
-        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+        <img
+          src={IMGS.heroAthlete}
+          alt="Athletic healthy lifestyle"
+          class="w-full h-full object-cover"
+          style="object-position: 60% 28%"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-transparent"></div>
       </div>
 
       <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32">
@@ -143,14 +158,32 @@ export const homePage = () => (
 
           {/* Image collage */}
           <div class="grid grid-cols-2 gap-3">
-            <div class="col-span-2 rounded-2xl overflow-hidden h-64">
-              <img src={IMGS.coupleJog} alt="Active healthy couple" class="w-full h-full object-cover object-top" />
+            {/* Wide landscape — couple jogging, faces in upper half */}
+            <div class="col-span-2 rounded-2xl overflow-hidden h-72">
+              <img
+                src={IMGS.coupleJog}
+                alt="Active healthy couple jogging"
+                class="w-full h-full object-cover"
+                style="object-position: 50% 30%"
+              />
             </div>
-            <div class="rounded-2xl overflow-hidden h-44">
-              <img src={IMGS.womanSmiling} alt="Happy wellness patient" class="w-full h-full object-cover object-top" />
+            {/* Portrait — smiling woman, face near top-center */}
+            <div class="rounded-2xl overflow-hidden h-56">
+              <img
+                src={IMGS.womanSmiling}
+                alt="Happy wellness patient"
+                class="w-full h-full object-cover"
+                style="object-position: 50% 20%"
+              />
             </div>
-            <div class="rounded-2xl overflow-hidden h-44">
-              <img src={IMGS.doctorTelehealth} alt="Doctor consultation" class="w-full h-full object-cover" />
+            {/* Landscape — doctor on laptop, upper body centered */}
+            <div class="rounded-2xl overflow-hidden h-56">
+              <img
+                src={IMGS.doctorTelehealth}
+                alt="Doctor consultation"
+                class="w-full h-full object-cover"
+                style="object-position: 45% 28%"
+              />
             </div>
           </div>
         </div>
@@ -164,10 +197,15 @@ export const homePage = () => (
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-          {/* Image */}
+          {/* Image — med spa interior, landscape, naturally centered */}
           <div class="relative">
             <div class="rounded-3xl overflow-hidden h-[520px]">
-              <img src={IMGS.medSpa} alt="Modern wellness clinic" class="w-full h-full object-cover" />
+              <img
+                src={IMGS.medSpa}
+                alt="Modern wellness clinic interior"
+                class="w-full h-full object-cover"
+                style="object-position: 50% 50%"
+              />
             </div>
             {/* Floating revenue card */}
             <div class="absolute -bottom-6 -right-4 bg-white rounded-2xl shadow-xl p-5 border border-gray-100 max-w-[220px]">
@@ -268,13 +306,25 @@ export const homePage = () => (
             </div>
           </div>
 
-          {/* Images */}
+          {/* Images — portrait creators, need face showing */}
           <div class="grid grid-cols-2 gap-3">
-            <div class="rounded-2xl overflow-hidden h-72">
-              <img src={IMGS.creatorWoman} alt="Female content creator" class="w-full h-full object-cover object-top" />
+            {/* Portrait creator woman — face at ~20% from top */}
+            <div class="rounded-2xl overflow-hidden h-96">
+              <img
+                src={IMGS.creatorWoman}
+                alt="Female content creator"
+                class="w-full h-full object-cover"
+                style="object-position: 50% 18%"
+              />
             </div>
-            <div class="rounded-2xl overflow-hidden h-72 mt-6">
-              <img src={IMGS.influencerTripod} alt="Influencer filming content" class="w-full h-full object-cover" />
+            {/* Portrait man on tripod — face/upper body at top */}
+            <div class="rounded-2xl overflow-hidden h-96 mt-8">
+              <img
+                src={IMGS.influencerTripod}
+                alt="Influencer filming content"
+                class="w-full h-full object-cover"
+                style="object-position: 50% 15%"
+              />
             </div>
             {/* Quote overlay */}
             <div class="col-span-2 bg-black rounded-2xl p-5">
@@ -316,7 +366,7 @@ export const homePage = () => (
           ))}
         </div>
 
-        {/* Doctor photo strip */}
+        {/* Doctor photo strip — portrait doctor female, face should show */}
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center bg-white rounded-3xl p-8 border border-gray-100">
           <div>
             <h3 class="font-bold text-gray-900 text-2xl mb-3 leading-tight">Our physicians are board-certified specialists — not a rubber stamp.</h3>
@@ -327,8 +377,14 @@ export const homePage = () => (
               ))}
             </div>
           </div>
-          <div class="rounded-2xl overflow-hidden h-64">
-            <img src={IMGS.doctorFemale} alt="Doctor providing telehealth consultation" class="w-full h-full object-cover object-top" />
+          {/* Portrait doctor — tall enough container, show face at top */}
+          <div class="rounded-2xl overflow-hidden h-80">
+            <img
+              src={IMGS.doctorFemale}
+              alt="Doctor providing telehealth consultation"
+              class="w-full h-full object-cover"
+              style="object-position: 50% 22%"
+            />
           </div>
         </div>
       </div>
@@ -353,6 +409,8 @@ export const homePage = () => (
           {[
             {
               img: IMGS.coupleSport,
+              // Portrait 3832×5745 — couple in sportswear, faces near top
+              imgPos: '50% 18%',
               name: 'Weight Management',
               products: 'Semaglutide · Tirzepatide',
               badge: '🔥 Highest Demand',
@@ -361,6 +419,8 @@ export const homePage = () => (
             },
             {
               img: IMGS.heroAthlete,
+              // Portrait 4000×6000 — man running, upper-center body visible
+              imgPos: '60% 28%',
               name: 'Recovery & Performance',
               products: 'BPC-157 · TB-500 · CJC-1295',
               badge: '💪 High Reorder Rate',
@@ -369,6 +429,8 @@ export const homePage = () => (
             },
             {
               img: IMGS.womanSmiling,
+              // Portrait 3510×5260 — smiling woman, face near top-center
+              imgPos: '50% 18%',
               name: 'Anti-Aging & Longevity',
               products: 'Epithalon · Sermorelin · NAD+',
               badge: '⏳ Trending Fast',
@@ -377,8 +439,13 @@ export const homePage = () => (
             },
           ].map(cat => (
             <div class="card-clean overflow-hidden">
-              <div class="h-48 overflow-hidden">
-                <img src={cat.img} alt={cat.name} class="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105" />
+              <div class="h-56 overflow-hidden">
+                <img
+                  src={cat.img}
+                  alt={cat.name}
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  style={`object-position: ${cat.imgPos}`}
+                />
               </div>
               <div class="p-6">
                 <span class={`inline-flex items-center gap-1 text-xs font-semibold px-3 py-1 rounded-full border mb-3 ${cat.badgeBg}`}>{cat.badge}</span>
@@ -434,8 +501,14 @@ export const homePage = () => (
           </div>
 
           <div class="space-y-4">
+            {/* Landscape doctor telehealth — centered */}
             <div class="rounded-2xl overflow-hidden h-72">
-              <img src={IMGS.doctorTelehealth} alt="Physician consultation" class="w-full h-full object-cover" />
+              <img
+                src={IMGS.doctorTelehealth}
+                alt="Physician consultation"
+                class="w-full h-full object-cover"
+                style="object-position: 45% 28%"
+              />
             </div>
             <div class="grid grid-cols-2 gap-4">
               {[
@@ -510,9 +583,14 @@ export const homePage = () => (
           ))}
         </div>
 
-        {/* Photo testimonial banner */}
+        {/* Photo testimonial banner — landscape couple jogging, faces centered */}
         <div class="relative rounded-3xl overflow-hidden h-64 md:h-72">
-          <img src={IMGS.coupleSport} alt="Active healthy partners" class="w-full h-full object-cover object-center" />
+          <img
+            src={IMGS.coupleJog}
+            alt="Active healthy partners"
+            class="w-full h-full object-cover"
+            style="object-position: 50% 30%"
+          />
           <div class="absolute inset-0 bg-black/60"></div>
           <div class="absolute inset-0 flex items-center justify-center text-center px-8">
             <div>
@@ -582,7 +660,13 @@ export const homePage = () => (
     ═══════════════════════════════════ */}
     <section class="relative py-32 overflow-hidden bg-black">
       <div class="absolute inset-0">
-        <img src={IMGS.coupleJog} alt="Healthy active lifestyle" class="w-full h-full object-cover opacity-30" />
+        {/* Landscape couple jogging — keep faces visible */}
+        <img
+          src={IMGS.coupleJog}
+          alt="Healthy active lifestyle"
+          class="w-full h-full object-cover opacity-30"
+          style="object-position: 50% 30%"
+        />
         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/40"></div>
       </div>
 

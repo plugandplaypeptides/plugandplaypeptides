@@ -5,7 +5,7 @@ export const applyPage = () => (
   <>
     {/* Apply page hero banner */}
     <section class="relative h-56 md:h-72 overflow-hidden bg-black">
-      <img src={HERO_IMG} alt="Health and vitality" class="w-full h-full object-cover object-center opacity-40" />
+      <img src={HERO_IMG} alt="Health and vitality" class="w-full h-full object-cover opacity-40" style="object-position:center 20%" />
       <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
       <div class="absolute inset-0 flex items-center justify-center text-center px-6">
         <div>

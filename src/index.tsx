@@ -8,7 +8,7 @@ const app = new Hono()
 
 // Serve static files
 app.use('/static/*', serveStatic({ root: './' }))
-app.use('/favicon.svg', serveStatic({ path: './public/favicon.svg' }))
+// favicon served inline to avoid __STATIC_CONTENT_MANIFEST issues in dev
 
 app.use(renderer)
 
