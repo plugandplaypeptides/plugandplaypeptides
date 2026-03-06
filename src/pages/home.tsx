@@ -278,9 +278,9 @@ export const homePage = () => (
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span class="label-caps block mb-4">The Opportunity</span>
+            <span class="label-caps block mb-4">From weight loss, longevity, recovery and performance...</span>
             <h2 class="display-sans text-gray-900 mb-6" style="font-size:clamp(2.2rem,4vw,3.5rem);">
-              From weight loss, longevity,<br />recovery and performance —<br />the peptide market is <span style="color:#16a34a">exploding.</span>
+              The peptide market<br />is <span style="color:#16a34a">exploding.</span>
             </h2>
             <p class="text-gray-800 text-lg leading-relaxed mb-6">
               Millions of people are buying peptides online, oftentimes unsafely with no medical supervision.
