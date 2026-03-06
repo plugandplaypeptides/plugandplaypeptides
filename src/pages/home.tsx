@@ -46,11 +46,8 @@ export const homePage = () => (
           <p class="text-gray-700 text-lg font-semibold mb-4" style="letter-spacing:0.01em;">
             All of the profit. <em style="color:#16a34a;">None of the headaches.</em>
           </p>
-          <h1 class="display-serif text-gray-900 mb-6" style="font-size:clamp(3.2rem,6.5vw,6rem); line-height:1.03;">
-            Your <em><span id="rotating-word" style="display:inline-block; min-width:3ch; color:#16a34a;">patients</span></em> are already<br />
-            buying peptides.<br />
-            Just not from you.<br />
-            <em style="color:#16a34a;">Until now...</em>
+          <h1 class="display-serif text-gray-900 mb-6" style="font-size:clamp(3.2rem,6.5vw,6rem); line-height:1.08; max-width:14ch;">
+            Your <em><span id="rotating-word" style="display:inline-block; min-width:3ch; color:#16a34a;">patients</span></em> are already buying peptides. Just not from you. <em style="color:#16a34a;">Until now...</em>
           </h1>
 
           <script dangerouslySetInnerHTML={{ __html: `
