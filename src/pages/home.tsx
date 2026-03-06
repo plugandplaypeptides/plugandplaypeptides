@@ -280,7 +280,7 @@ export const homePage = () => (
           <div>
             <span class="label-caps block mb-4">The Opportunity</span>
             <h2 class="display-sans text-gray-900 mb-6" style="font-size:clamp(2.2rem,4vw,3.5rem);">
-              The peptide market<br />is at an<br /><span style="color:#16a34a">inflection point.</span>
+              The peptide market<br />is<br /><span style="color:#16a34a">exploding.</span>
             </h2>
             <p class="text-gray-800 text-lg leading-relaxed mb-6">
               Millions of people are actively searching for peptides — for weight loss, anti-aging, recovery, and performance. They're buying from random online sources, often unsafely.
