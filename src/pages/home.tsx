@@ -1,439 +1,208 @@
 export const homePage = () => (
   <>
-    {/* ===== HERO SECTION ===== */}
-    <section class="hero-bg min-h-screen flex items-center relative overflow-hidden">
-      {/* Background decoration */}
-      <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <div class="absolute -top-40 -right-40 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
-        <div class="absolute top-1/2 -left-40 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 right-1/4 w-64 h-64 bg-emerald-700/10 rounded-full blur-3xl"></div>
-        {/* DNA helix dots */}
-        <div class="absolute top-20 left-1/4 w-2 h-2 bg-emerald-400/30 rounded-full"></div>
-        <div class="absolute top-32 left-1/3 w-1 h-1 bg-teal-400/40 rounded-full"></div>
-        <div class="absolute top-48 left-1/5 w-3 h-3 bg-emerald-300/20 rounded-full"></div>
-        <div class="absolute bottom-32 right-1/4 w-2 h-2 bg-teal-500/30 rounded-full"></div>
-        <div class="absolute bottom-48 right-1/3 w-1 h-1 bg-emerald-400/40 rounded-full"></div>
-      </div>
+    {/* ═══════════════════════════════════════
+        HERO — white bg, editorial type, bold CTA
+    ═══════════════════════════════════════ */}
+    <section class="section-white pt-20 pb-0 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <div class="inline-flex items-center tag-pill rounded-full px-4 py-1.5 text-sm font-medium mb-6">
-              <i class="fas fa-certificate mr-2 text-xs"></i>
-              Physician-Supervised • White-Label Ready
-            </div>
-            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-              <span class="text-white">Launch Your Own</span><br />
-              <span class="gradient-text">Peptide Brand</span><br />
-              <span class="text-white">In Weeks, Not Years</span>
-            </h1>
-            <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-lg">
-              Partner with Plug & Play Peptides to sell premium peptide products under <strong class="text-white">your brand name</strong> — dispensed compliantly through licensed physicians. No lab. No compliance headaches. Just revenue.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-              <a href="/apply" class="btn-primary text-white font-bold px-8 py-4 rounded-xl text-base inline-flex items-center justify-center">
-                <i class="fas fa-rocket mr-2"></i>
-                Apply to Partner
-              </a>
-              <a href="/#how-it-works" class="btn-outline font-bold px-8 py-4 rounded-xl text-base inline-flex items-center justify-center">
-                <i class="fas fa-play-circle mr-2"></i>
-                See How It Works
-              </a>
-            </div>
-            <div class="flex items-center gap-6 mt-8">
-              <div class="flex -space-x-2">
-                <div class="w-9 h-9 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 border-2 border-slate-900 flex items-center justify-center text-xs font-bold">B</div>
-                <div class="w-9 h-9 rounded-full bg-gradient-to-br from-violet-400 to-purple-500 border-2 border-slate-900 flex items-center justify-center text-xs font-bold">I</div>
-                <div class="w-9 h-9 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 border-2 border-slate-900 flex items-center justify-center text-xs font-bold">F</div>
-                <div class="w-9 h-9 rounded-full bg-gradient-to-br from-rose-400 to-pink-500 border-2 border-slate-900 flex items-center justify-center text-xs font-bold">+</div>
-              </div>
-              <p class="text-slate-400 text-sm"><span class="text-white font-semibold">50+ brands & influencers</span> already partnered</p>
-            </div>
-          </div>
-
-          {/* Hero Visual Card */}
-          <div class="hidden lg:block">
-            <div class="relative">
-              <div class="bg-slate-800/60 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 glow-green">
-                <div class="flex items-center justify-between mb-6">
-                  <div>
-                    <p class="text-slate-400 text-xs uppercase tracking-wider">Your Brand Dashboard</p>
-                    <h3 class="text-white font-bold text-lg mt-1">Performance Overview</h3>
-                  </div>
-                  <div class="tag-pill px-3 py-1 rounded-full text-xs font-medium">
-                    <i class="fas fa-circle text-xs mr-1" style="color:#10b981"></i> Live
-                  </div>
-                </div>
-
-                <div class="grid grid-cols-2 gap-4 mb-6">
-                  <div class="stat-card rounded-xl p-4">
-                    <p class="text-slate-400 text-xs mb-1">Monthly Revenue</p>
-                    <p class="text-white text-2xl font-bold">$48,250</p>
-                    <p class="text-emerald-400 text-xs mt-1"><i class="fas fa-arrow-up mr-1"></i>+32% this month</p>
-                  </div>
-                  <div class="stat-card rounded-xl p-4">
-                    <p class="text-slate-400 text-xs mb-1">Active Patients</p>
-                    <p class="text-white text-2xl font-bold">1,847</p>
-                    <p class="text-emerald-400 text-xs mt-1"><i class="fas fa-arrow-up mr-1"></i>+18% this month</p>
-                  </div>
-                  <div class="stat-card rounded-xl p-4">
-                    <p class="text-slate-400 text-xs mb-1">Products Active</p>
-                    <p class="text-white text-2xl font-bold">12</p>
-                    <p class="text-slate-400 text-xs mt-1">Under your brand</p>
-                  </div>
-                  <div class="stat-card rounded-xl p-4">
-                    <p class="text-slate-400 text-xs mb-1">Reorder Rate</p>
-                    <p class="text-white text-2xl font-bold">76%</p>
-                    <p class="text-emerald-400 text-xs mt-1"><i class="fas fa-star mr-1"></i>Industry leading</p>
-                  </div>
-                </div>
-
-                <div class="bg-slate-900/60 rounded-xl p-4">
-                  <p class="text-slate-400 text-xs mb-3">Recent Orders</p>
-                  {[
-                    { product: 'BPC-157 Pro', customer: 'Patient #2847', status: 'Dispensed', amount: '$189' },
-                    { product: 'Semaglutide', customer: 'Patient #2846', status: 'Processing', amount: '$345' },
-                    { product: 'TB-500 Elite', customer: 'Patient #2845', status: 'Dispensed', amount: '$220' },
-                  ].map((order) => (
-                    <div class="flex items-center justify-between py-2 border-b border-slate-800 last:border-0">
-                      <div>
-                        <p class="text-white text-xs font-medium">{order.product}</p>
-                        <p class="text-slate-500 text-xs">{order.customer}</p>
-                      </div>
-                      <div class="text-right">
-                        <p class="text-white text-xs font-semibold">{order.amount}</p>
-                        <span class={`text-xs ${order.status === 'Dispensed' ? 'text-emerald-400' : 'text-amber-400'}`}>{order.status}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              {/* Floating badges */}
-              <div class="absolute -top-4 -right-4 bg-emerald-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
-                <i class="fas fa-shield-alt mr-1"></i>FDA Compliant
-              </div>
-              <div class="absolute -bottom-4 -left-4 bg-slate-800 border border-emerald-500/30 text-emerald-400 text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
-                <i class="fas fa-tag mr-1"></i>Your Brand, Your Margins
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* ===== STATS BAR ===== */}
-    <section class="bg-slate-800/50 border-y border-slate-700/50 py-10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[
-            { value: '50+', label: 'Active Partners', icon: 'fa-handshake' },
-            { value: '98%', label: 'Partner Retention Rate', icon: 'fa-heart' },
-            { value: '2–4 Wks', label: 'Average Launch Time', icon: 'fa-rocket' },
-            { value: '100%', label: 'Physician-Supervised', icon: 'fa-user-md' },
-          ].map((stat) => (
-            <div class="flex flex-col items-center">
-              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-3">
-                <i class={`fas ${stat.icon} text-emerald-400 text-lg`}></i>
-              </div>
-              <div class="text-3xl font-extrabold gradient-text mb-1">{stat.value}</div>
-              <div class="text-slate-400 text-sm">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    {/* ===== HOW IT WORKS ===== */}
-    <section id="how-it-works" class="py-24 bg-slate-900">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <div class="inline-flex items-center tag-pill rounded-full px-4 py-1.5 text-sm font-medium mb-4">
-            <i class="fas fa-map mr-2 text-xs"></i>Simple Process
-          </div>
-          <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
-            From Application to <span class="gradient-text">Revenue</span>
-          </h2>
-          <p class="text-slate-400 text-lg max-w-2xl mx-auto">
-            We've built the entire infrastructure so you don't have to. Just bring your audience — we handle everything else.
-          </p>
+        {/* Top label */}
+        <div class="flex justify-center mb-8">
+          <span class="tag-green"><i class="fas fa-circle text-green-500" style="font-size:6px"></i>Physician-Supervised White-Label Peptides</span>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-          {[
-            {
-              step: '01',
-              icon: 'fa-file-alt',
-              title: 'Apply & Onboard',
-              desc: 'Submit your application. Our team reviews your brand, audience, and goals. Onboarding takes as little as 48 hours.',
-            },
-            {
-              step: '02',
-              icon: 'fa-palette',
-              title: 'Brand Your Line',
-              desc: 'Choose from our curated peptide catalog. We custom-label everything under your brand name, logo, and aesthetic.',
-            },
-            {
-              step: '03',
-              icon: 'fa-user-md',
-              title: 'Physician Network Activated',
-              desc: 'Our licensed physician network reviews and approves patient consultations, ensuring full compliance at every step.',
-            },
-            {
-              step: '04',
-              icon: 'fa-chart-line',
-              title: 'Sell & Scale',
-              desc: 'Drive your audience to your branded portal. Patients consult with doctors, get approved, and receive products. You earn.',
-            },
-          ].map((item, i) => (
-            <div class="card-hover bg-slate-800/50 border border-slate-700 rounded-2xl p-6 text-center relative">
-              <div class="text-slate-700 text-6xl font-black absolute top-4 right-4 leading-none select-none">{item.step}</div>
-              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 flex items-center justify-center mx-auto mb-4 relative z-10">
-                <i class={`fas ${item.icon} text-emerald-400 text-xl`}></i>
-              </div>
-              <h3 class="text-white font-bold text-lg mb-3 relative z-10">{item.title}</h3>
-              <p class="text-slate-400 text-sm leading-relaxed relative z-10">{item.desc}</p>
-            </div>
-          ))}
-        </div>
+        {/* Headline */}
+        <h1 class="display-serif text-center text-gray-900 mb-6" style="font-size:clamp(2.8rem,6vw,5.5rem);">
+          Your brand.<br />
+          <em style="color:#16a34a">Their prescription.</em><br />
+          Your revenue.
+        </h1>
 
-        <div class="text-center mt-12">
-          <a href="/apply" class="btn-primary text-white font-bold px-10 py-4 rounded-xl text-base inline-flex items-center">
-            <i class="fas fa-arrow-right mr-2"></i>
-            Start Your Application
+        <p class="text-center text-gray-500 text-lg leading-relaxed max-w-xl mx-auto mb-10" style="font-weight:400;">
+          We give businesses and creators everything they need to launch a premium peptide brand — compliantly dispensed through licensed physicians.
+        </p>
+
+        {/* CTAs */}
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-16">
+          <a href="/apply?type=business" class="btn-black w-full sm:w-auto justify-center">
+            Apply as a Business
+          </a>
+          <a href="/apply?type=influencer" class="btn-outline-black w-full sm:w-auto justify-center">
+            Apply as an Influencer
           </a>
         </div>
-      </div>
-    </section>
 
-    {/* ===== FOR BUSINESSES ===== */}
-    <section id="for-businesses" class="py-24 bg-slate-950">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <div class="inline-flex items-center tag-pill rounded-full px-4 py-1.5 text-sm font-medium mb-6">
-              <i class="fas fa-building mr-2 text-xs"></i>For Businesses
-            </div>
-            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">
-              White-Label Peptides<br /><span class="gradient-text">Under Your Brand</span>
-            </h2>
-            <p class="text-slate-300 text-lg leading-relaxed mb-8">
-              Whether you run a wellness clinic, supplement brand, medical spa, or health-focused e-commerce store — we power your peptide line from end to end.
-            </p>
-            <div class="space-y-4 mb-8">
-              {[
-                { icon: 'fa-flask', title: 'Full Product Catalog Access', desc: 'BPC-157, TB-500, Semaglutide, Tirzepatide, PT-141, and more — all available for white-labeling.' },
-                { icon: 'fa-tag', title: 'Custom Branding & Packaging', desc: 'Your logo, your name, your aesthetic. We handle all label design and packaging production.' },
-                { icon: 'fa-balance-scale', title: 'Built-In Legal & Compliance', desc: 'Every product dispensed through our licensed physician network. Zero compliance risk for you.' },
-                { icon: 'fa-chart-bar', title: 'Revenue Share Model', desc: 'Competitive margins on every unit sold. The more you scale, the better your margins get.' },
-                { icon: 'fa-headset', title: 'Dedicated Partner Support', desc: 'A dedicated account manager to help you launch, optimize, and grow your peptide revenue.' },
-              ].map((feature) => (
-                <div class="flex items-start gap-4">
-                  <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i class={`fas ${feature.icon} text-emerald-400 text-sm`}></i>
-                  </div>
-                  <div>
-                    <h4 class="text-white font-semibold mb-1">{feature.title}</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">{feature.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <a href="/apply?type=business" class="btn-primary text-white font-bold px-8 py-4 rounded-xl text-base inline-flex items-center">
-              <i class="fas fa-building mr-2"></i>Apply as a Business
-            </a>
-          </div>
-
-          {/* Business Visual */}
-          <div class="space-y-4">
-            <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 card-hover">
-              <div class="flex items-center gap-4 mb-4">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
-                  <i class="fas fa-spa text-white"></i>
-                </div>
-                <div>
-                  <h4 class="text-white font-bold">Wellness Clinics</h4>
-                  <p class="text-slate-400 text-sm">Add peptides to your existing service menu</p>
-                </div>
-              </div>
-              <p class="text-slate-400 text-sm">Offer clients anti-aging, recovery, and weight management peptide protocols — prescribed on-site or via telehealth integration.</p>
-            </div>
-            <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 card-hover">
-              <div class="flex items-center gap-4 mb-4">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
-                  <i class="fas fa-shopping-bag text-white"></i>
-                </div>
-                <div>
-                  <h4 class="text-white font-bold">Supplement Brands</h4>
-                  <p class="text-slate-400 text-sm">Expand beyond OTC with prescription peptides</p>
-                </div>
-              </div>
-              <p class="text-slate-400 text-sm">Complement your existing product line with physician-dispensed peptides. Give your customers the clinical-grade options they're already asking for.</p>
-            </div>
-            <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 card-hover">
-              <div class="flex items-center gap-4 mb-4">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center">
-                  <i class="fas fa-dumbbell text-white"></i>
-                </div>
-                <div>
-                  <h4 class="text-white font-bold">Fitness & Performance</h4>
-                  <p class="text-slate-400 text-sm">Recovery, muscle growth, and fat loss protocols</p>
-                </div>
-              </div>
-              <p class="text-slate-400 text-sm">From BPC-157 recovery to GH secretagogues for lean mass — build a full performance peptide brand your audience trusts.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* ===== FOR INFLUENCERS ===== */}
-    <section id="for-influencers" class="py-24 bg-slate-900">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Influencer Visual */}
-          <div class="order-2 lg:order-1">
-            <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 glow-green">
-              <h3 class="text-white font-bold text-xl mb-6">Your Potential Monthly Earnings</h3>
-              <div class="space-y-4">
-                {[
-                  { tier: 'Micro (10K–50K followers)', orders: '50–150', monthly: '$5,000–$18,000', color: 'from-slate-500 to-slate-600' },
-                  { tier: 'Mid-Tier (50K–500K)', orders: '150–600', monthly: '$18,000–$75,000', color: 'from-emerald-600 to-teal-600' },
-                  { tier: 'Macro (500K–2M)', orders: '600–2,500', monthly: '$75,000–$300,000', color: 'from-emerald-500 to-green-500' },
-                  { tier: 'Mega (2M+ followers)', orders: '2,500+', monthly: '$300,000+', color: 'from-amber-500 to-orange-500' },
-                ].map((tier) => (
-                  <div class="bg-slate-900/60 rounded-xl p-4">
-                    <div class="flex items-center justify-between mb-2">
-                      <span class="text-slate-300 text-sm font-medium">{tier.tier}</span>
-                    </div>
-                    <div class="flex items-center justify-between">
-                      <div>
-                        <p class="text-slate-500 text-xs">Est. Monthly Orders</p>
-                        <p class="text-white font-semibold text-sm">{tier.orders}</p>
-                      </div>
-                      <div class="text-right">
-                        <p class="text-slate-500 text-xs">Est. Monthly Revenue</p>
-                        <p class={`font-bold text-sm bg-gradient-to-r ${tier.color} bg-clip-text text-transparent`} style="background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent">{tier.monthly}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <p class="text-slate-500 text-xs mt-4 text-center">*Estimates based on average conversion rates. Actual results vary.</p>
-            </div>
-          </div>
-
-          <div class="order-1 lg:order-2">
-            <div class="inline-flex items-center tag-pill rounded-full px-4 py-1.5 text-sm font-medium mb-6">
-              <i class="fas fa-star mr-2 text-xs"></i>For Influencers & Creators
-            </div>
-            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">
-              Monetize Your Audience<br /><span class="gradient-text">With Your Own Brand</span>
-            </h2>
-            <p class="text-slate-300 text-lg leading-relaxed mb-8">
-              Stop promoting other people's products. With Plug & Play Peptides, <strong class="text-white">you own the brand</strong>. Your audience buys <em>your</em> peptides — and you keep the margins.
-            </p>
-            <div class="space-y-4 mb-8">
-              {[
-                { icon: 'fa-bolt', title: 'Launch in 2–4 Weeks', desc: 'We handle brand creation, physician onboarding, and compliance so you can launch fast.' },
-                { icon: 'fa-percentage', title: 'Industry-High Margins', desc: 'Earn significantly more than affiliate commissions. These are YOUR products at YOUR margins.' },
-                { icon: 'fa-link', title: 'Custom-Branded Patient Portal', desc: 'Your audience shops at your branded URL. Seamless, professional, and physician-backed.' },
-                { icon: 'fa-repeat', title: 'Recurring Revenue', desc: 'Peptide protocols require monthly refills. Build a subscription-based income stream from your audience.' },
-                { icon: 'fa-shield-alt', title: 'Full Legal Protection', desc: 'All products dispensed by licensed doctors. You promote — they prescribe. Zero liability for you.' },
-              ].map((feature) => (
-                <div class="flex items-start gap-4">
-                  <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i class={`fas ${feature.icon} text-emerald-400 text-sm`}></i>
-                  </div>
-                  <div>
-                    <h4 class="text-white font-semibold mb-1">{feature.title}</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">{feature.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <a href="/apply?type=influencer" class="btn-primary text-white font-bold px-8 py-4 rounded-xl text-base inline-flex items-center">
-              <i class="fas fa-star mr-2"></i>Apply as an Influencer
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* ===== WHY US ===== */}
-    <section id="why-us" class="py-24 bg-slate-950">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <div class="inline-flex items-center tag-pill rounded-full px-4 py-1.5 text-sm font-medium mb-4">
-            <i class="fas fa-trophy mr-2 text-xs"></i>Our Advantage
-          </div>
-          <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
-            Why <span class="gradient-text">Plug & Play Peptides?</span>
-          </h2>
-          <p class="text-slate-400 text-lg max-w-2xl mx-auto">
-            The peptide market is booming. We've built the only end-to-end white-label platform that lets you tap into it — legally and profitably.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        {/* Trust strip */}
+        <div class="flex flex-wrap items-center justify-center gap-6 pb-12 divider">
           {[
-            {
-              icon: 'fa-user-md',
-              title: 'Licensed Physician Network',
-              desc: 'Every peptide order flows through board-certified physicians in our network. Prescriptions, consultations, and dispensing — all handled.',
-              color: 'from-emerald-500 to-teal-600',
-            },
-            {
-              icon: 'fa-flask',
-              title: 'Pharmaceutical-Grade Products',
-              desc: 'All compounds sourced from licensed, inspected compounding pharmacies. COAs available for every batch. No compromise on quality.',
-              color: 'from-teal-500 to-cyan-600',
-            },
-            {
-              icon: 'fa-cogs',
-              title: 'Full-Stack Infrastructure',
-              desc: 'Branded patient portal, telehealth integration, CRM, order management, and partner dashboard — all included. No tech required.',
-              color: 'from-emerald-600 to-green-700',
-            },
-            {
-              icon: 'fa-shipping-fast',
-              title: 'Nationwide Fulfillment',
-              desc: 'Discreet, professional packaging shipped directly to patients across the US with real-time tracking and temperature control.',
-              color: 'from-sky-500 to-blue-600',
-            },
-            {
-              icon: 'fa-graduation-cap',
-              title: 'Partner Education Portal',
-              desc: 'Access our library of medical content, marketing materials, and educational resources to confidently promote your brand.',
-              color: 'from-violet-500 to-purple-600',
-            },
-            {
-              icon: 'fa-expand-arrows-alt',
-              title: 'Scale Without Limits',
-              desc: 'Our infrastructure handles 10 orders or 10,000 orders a month. As you grow, your dedicated support team grows with you.',
-              color: 'from-amber-500 to-orange-600',
-            },
-          ].map((item) => (
-            <div class="card-hover bg-slate-800/40 border border-slate-700 rounded-2xl p-6">
-              <div class={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.color} bg-opacity-20 flex items-center justify-center mb-4`} style={`background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(5,150,105,0.25))`}>
-                <i class={`fas ${item.icon} text-emerald-400 text-xl`}></i>
-              </div>
-              <h3 class="text-white font-bold text-lg mb-3">{item.title}</h3>
-              <p class="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+            { icon: 'fa-user-md', text: 'Board-Certified Physicians' },
+            { icon: 'fa-flask', text: 'Licensed Compounding Pharmacies' },
+            { icon: 'fa-shield-alt', text: 'HIPAA-Compliant Platform' },
+            { icon: 'fa-rocket', text: 'Live in 2–4 Weeks' },
+          ].map(item => (
+            <div class="flex items-center gap-2 text-gray-400 text-sm font-medium">
+              <i class={`fas ${item.icon} text-green-500 text-xs`}></i>
+              {item.text}
             </div>
           ))}
         </div>
 
-        {/* Compliance Banner */}
-        <div class="bg-gradient-to-r from-emerald-900/30 to-teal-900/30 border border-emerald-500/20 rounded-2xl p-8 text-center">
-          <i class="fas fa-shield-alt text-emerald-400 text-3xl mb-4 block"></i>
-          <h3 class="text-white font-bold text-2xl mb-3">100% Compliant. 100% Protected.</h3>
-          <p class="text-slate-300 max-w-2xl mx-auto mb-4">
-            Every product in our catalog is dispensed through licensed compounding pharmacies and prescribed by board-certified physicians — following all FDA and DEA guidelines. Our legal team monitors the regulatory landscape so your business stays protected.
+        {/* Hero visual — mock dashboard */}
+        <div class="max-w-4xl mx-auto mt-12 relative">
+          {/* Browser chrome */}
+          <div class="bg-gray-100 rounded-t-2xl px-4 py-3 flex items-center gap-2 border border-gray-200 border-b-0">
+            <div class="flex gap-1.5">
+              <div class="w-3 h-3 rounded-full bg-red-400"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+              <div class="w-3 h-3 rounded-full bg-green-400"></div>
+            </div>
+            <div class="flex-1 bg-white rounded-md px-3 py-1 text-xs text-gray-400 ml-2 border border-gray-200">
+              app.plugandplaypeptides.com/<strong class="text-gray-600">yourbrand</strong>
+            </div>
+          </div>
+          {/* Dashboard */}
+          <div class="bg-white border border-gray-200 border-t-0 rounded-b-2xl p-6 shadow-xl">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+              {[
+                { label: 'Monthly Revenue', value: '$48,250', change: '+32%', up: true },
+                { label: 'Active Patients', value: '1,847', change: '+18%', up: true },
+                { label: 'Active Products', value: '12', change: 'Under your brand', up: null },
+                { label: 'Reorder Rate', value: '76%', change: 'Industry-leading', up: null },
+              ].map(s => (
+                <div class="bg-gray-50 rounded-xl p-4 border border-gray-100">
+                  <p class="text-xs text-gray-400 mb-1.5">{s.label}</p>
+                  <p class="text-xl font-bold text-gray-900 leading-none mb-1">{s.value}</p>
+                  <p class={`text-xs font-medium ${s.up === true ? 'text-green-600' : 'text-gray-400'}`}>{s.up === true ? '↑ ' : ''}{s.change}</p>
+                </div>
+              ))}
+            </div>
+            <div class="flex items-center justify-between bg-green-50 border border-green-100 rounded-xl px-4 py-3">
+              <div class="flex items-center gap-2">
+                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <span class="text-sm font-medium text-gray-700">3 new patient consultations approved today</span>
+              </div>
+              <span class="text-xs text-green-600 font-semibold">View →</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {/* ═══════════════════════════════════════
+        STATS — cream bg
+    ═══════════════════════════════════════ */}
+    <section class="section-cream py-20">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 md:divide-x divide-gray-200">
+          {[
+            { value: '50+', label: 'Active Partner Brands' },
+            { value: '98%', label: 'Partner Retention Rate' },
+            { value: '2–4 wks', label: 'Average Time to Launch' },
+            { value: '100%', label: 'Physician-Supervised' },
+          ].map(s => (
+            <div class="text-center md:px-8">
+              <div class="stat-big mb-2">{s.value}</div>
+              <p class="text-sm text-gray-500 font-medium">{s.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ═══════════════════════════════════════
+        HOW IT WORKS — white
+    ═══════════════════════════════════════ */}
+    <section id="how-it-works" class="section-white py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="max-w-2xl mb-16">
+          <span class="label-caps block mb-3">The Process</span>
+          <h2 class="display-sans text-gray-900 mb-4" style="font-size:clamp(2rem,4vw,3.25rem);">
+            From application<br />to revenue.
+          </h2>
+          <p class="text-gray-500 text-lg leading-relaxed">
+            We've built every piece of the infrastructure. You bring the audience — we handle everything else.
           </p>
-          <div class="flex flex-wrap justify-center gap-4 mt-4">
-            {['Licensed Compounding Pharmacies', 'Board-Certified Physicians', 'HIPAA Compliant Technology', 'State-Licensed Operations'].map((badge) => (
-              <div class="tag-pill px-4 py-2 rounded-full text-sm font-medium">
-                <i class="fas fa-check-circle mr-2"></i>{badge}
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { n: '01', icon: 'fa-file-signature', title: 'Apply & Onboard', body: 'Submit your 5-minute application. Our team reviews your brand and goals. Onboarding takes as little as 48 hours.' },
+            { n: '02', icon: 'fa-palette', title: 'Brand Your Line', body: 'Choose from our peptide catalog. We custom-label products under your name, logo, and brand aesthetic.' },
+            { n: '03', icon: 'fa-user-md', title: 'Physicians Activated', body: 'Our network of licensed physicians handles all patient consultations, prescriptions, and approvals.' },
+            { n: '04', icon: 'fa-chart-line', title: 'Sell & Scale', body: 'Drive your audience to your branded patient portal. They consult, get approved, receive products. You earn.' },
+          ].map(step => (
+            <div class="card-cream p-6 relative overflow-hidden">
+              <div class="step-num absolute -top-2 -right-1 select-none pointer-events-none">{step.n}</div>
+              <div class="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center mb-5 relative z-10">
+                <i class={`fas ${step.icon} text-green-600 text-sm`}></i>
+              </div>
+              <h3 class="font-bold text-gray-900 text-base mb-2 relative z-10">{step.title}</h3>
+              <p class="text-gray-500 text-sm leading-relaxed relative z-10">{step.body}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-10">
+          <a href="/apply" class="btn-black">Start Your Application</a>
+        </div>
+      </div>
+    </section>
+
+    {/* ═══════════════════════════════════════
+        FOR BUSINESSES — cream bg, split layout
+    ═══════════════════════════════════════ */}
+    <section id="businesses" class="section-cream py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          <div>
+            <span class="label-caps block mb-4">For Businesses & Brands</span>
+            <h2 class="display-sans text-gray-900 mb-6" style="font-size:clamp(2rem,4vw,3rem);">
+              White-label peptides.<br />Under your brand.
+            </h2>
+            <p class="text-gray-500 text-lg leading-relaxed mb-8">
+              Whether you run a wellness clinic, supplement company, medical spa, or health e-commerce store — we power your peptide line from formulation to fulfillment.
+            </p>
+
+            <ul class="space-y-5 mb-10">
+              {[
+                { icon: 'fa-flask', title: 'Full product catalog access', body: 'BPC-157, Semaglutide, Tirzepatide, TB-500, CJC-1295 and more — all available for white-labeling.' },
+                { icon: 'fa-tag', title: 'Custom branding & packaging', body: 'Your logo. Your name. Your aesthetic. We design and produce all labeling and packaging.' },
+                { icon: 'fa-balance-scale', title: 'Built-in legal compliance', body: 'Every product dispensed through our licensed physician network. Zero compliance risk on your end.' },
+                { icon: 'fa-chart-bar', title: 'Industry-competitive margins', body: 'Earn significantly more than typical distribution models. Volume-based margin improvements.' },
+                { icon: 'fa-headset', title: 'Dedicated partner support', body: 'A named account manager helps you launch, optimize campaigns, and grow your revenue.' },
+              ].map(f => (
+                <li class="flex gap-4">
+                  <div class="w-9 h-9 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class={`fas ${f.icon} text-green-600 text-xs`}></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-gray-900 text-sm mb-0.5">{f.title}</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">{f.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+
+            <a href="/apply?type=business" class="btn-black">Apply as a Business</a>
+          </div>
+
+          {/* Right — use-case cards */}
+          <div class="space-y-4">
+            {[
+              { emoji: '🏥', title: 'Wellness & Med Spas', sub: 'Add a peptide protocol menu alongside your existing services.', color: 'bg-violet-50 border-violet-100' },
+              { emoji: '💊', title: 'Supplement Brands', sub: 'Expand beyond OTC — offer prescription peptides your customers are already searching for.', color: 'bg-amber-50 border-amber-100' },
+              { emoji: '🏋️', title: 'Fitness & Performance', sub: 'Build a peptide brand around recovery, lean mass, and fat loss for a results-driven audience.', color: 'bg-sky-50 border-sky-100' },
+              { emoji: '💻', title: 'Telehealth Platforms', sub: 'Integrate our physician network and dispensing infrastructure into your existing digital health flow.', color: 'bg-green-50 border-green-100' },
+            ].map(c => (
+              <div class={`card-clean p-5 border ${c.color}`} style="border-radius:14px;">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="text-2xl">{c.emoji}</span>
+                  <h4 class="font-bold text-gray-900 text-sm">{c.title}</h4>
+                </div>
+                <p class="text-gray-500 text-sm leading-relaxed pl-10">{c.sub}</p>
               </div>
             ))}
           </div>
@@ -441,105 +210,271 @@ export const homePage = () => (
       </div>
     </section>
 
-    {/* ===== PRODUCT CATALOG PREVIEW ===== */}
-    <section class="py-24 bg-slate-900">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <div class="inline-flex items-center tag-pill rounded-full px-4 py-1.5 text-sm font-medium mb-4">
-            <i class="fas fa-vials mr-2 text-xs"></i>Product Portfolio
+    {/* ═══════════════════════════════════════
+        FOR INFLUENCERS — white, split reversed
+    ═══════════════════════════════════════ */}
+    <section id="influencers" class="section-white py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          {/* Earnings table — left */}
+          <div class="order-2 lg:order-1">
+            <div class="card-clean p-6 md:p-8">
+              <p class="label-caps mb-6">Estimated Monthly Earnings</p>
+              <div class="space-y-3">
+                {[
+                  { tier: 'Micro Creator', range: '10K – 50K followers', orders: '50–150 orders', rev: '$5K – $18K / mo', bar: 12 },
+                  { tier: 'Mid-Tier Creator', range: '50K – 500K followers', orders: '150–600 orders', rev: '$18K – $75K / mo', bar: 35 },
+                  { tier: 'Macro Creator', range: '500K – 2M followers', orders: '600–2,500 orders', rev: '$75K – $300K / mo', bar: 65 },
+                  { tier: 'Mega Creator', range: '2M+ followers', orders: '2,500+ orders', rev: '$300K+ / mo', bar: 100 },
+                ].map((t, i) => (
+                  <div class="p-4 rounded-xl border border-gray-100 bg-gray-50">
+                    <div class="flex items-center justify-between mb-2">
+                      <div>
+                        <p class="font-semibold text-gray-900 text-sm">{t.tier}</p>
+                        <p class="text-xs text-gray-400">{t.range} · {t.orders}</p>
+                      </div>
+                      <span class="font-bold text-gray-900 text-sm text-right">{t.rev}</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                      <div class="bg-green-500 h-1.5 rounded-full" style={`width:${t.bar}%`}></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p class="text-xs text-gray-400 mt-4">* Estimates based on average conversion rates. Individual results vary.</p>
+            </div>
           </div>
-          <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
-            A Catalog Built for <span class="gradient-text">Every Audience</span>
+
+          {/* Right — copy */}
+          <div class="order-1 lg:order-2">
+            <span class="label-caps block mb-4">For Influencers & Creators</span>
+            <h2 class="display-sans text-gray-900 mb-6" style="font-size:clamp(2rem,4vw,3rem);">
+              Stop promoting<br />other brands.
+            </h2>
+            <p class="text-gray-500 text-lg leading-relaxed mb-8">
+              Your audience already trusts you on health. With Plug & Play Peptides, <strong class="text-gray-900">you own the brand</strong> — and you keep the margins that used to go to someone else.
+            </p>
+
+            <ul class="space-y-5 mb-10">
+              {[
+                { icon: 'fa-bolt', title: 'Launch in 2–4 weeks', body: 'Brand creation, physician onboarding, patient portal — all handled by us.' },
+                { icon: 'fa-percentage', title: 'Industry-leading margins', body: 'Earn 5–10x what typical affiliate commissions pay. These are your products.' },
+                { icon: 'fa-repeat', title: 'Recurring subscription revenue', body: 'Peptide protocols require monthly refills. Build a subscription income stream from your audience.' },
+                { icon: 'fa-shield-alt', title: 'Zero legal liability', body: 'All products prescribed by licensed doctors. You promote — they prescribe. Clean and compliant.' },
+              ].map(f => (
+                <li class="flex gap-4">
+                  <div class="w-9 h-9 rounded-lg bg-gray-50 border border-gray-200 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class={`fas ${f.icon} text-green-600 text-xs`}></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-gray-900 text-sm mb-0.5">{f.title}</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">{f.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+
+            <a href="/apply?type=influencer" class="btn-black">Apply as a Creator</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ═══════════════════════════════════════
+        PRODUCT CATALOG — cream
+    ═══════════════════════════════════════ */}
+    <section id="catalog" class="section-cream py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div>
+            <span class="label-caps block mb-3">Product Portfolio</span>
+            <h2 class="display-sans text-gray-900" style="font-size:clamp(2rem,4vw,3rem);">
+              A catalog built for<br />every audience.
+            </h2>
+          </div>
+          <p class="text-gray-500 text-sm max-w-xs leading-relaxed md:text-right">
+            From longevity to weight management to performance recovery — 20+ compounds available for white-labeling.
+          </p>
+        </div>
+
+        {/* Product pills row */}
+        <div class="flex flex-wrap gap-2.5 mb-10">
+          {[
+            { name: 'Semaglutide', cat: 'Weight Management', hot: true },
+            { name: 'Tirzepatide', cat: 'Weight Management', hot: true },
+            { name: 'BPC-157', cat: 'Recovery', hot: false },
+            { name: 'TB-500', cat: 'Recovery', hot: false },
+            { name: 'CJC-1295 / Ipamorelin', cat: 'Anti-Aging', hot: false },
+            { name: 'PT-141', cat: 'Sexual Health', hot: false },
+            { name: 'Sermorelin', cat: 'Longevity', hot: false },
+            { name: 'Epithalon', cat: 'Longevity', hot: false },
+            { name: 'Melanotan II', cat: 'Tanning', hot: false },
+            { name: 'NAD+', cat: 'Energy', hot: false },
+            { name: 'Thymosin Alpha-1', cat: 'Immune', hot: false },
+            { name: '+ 9 more', cat: '', hot: false },
+          ].map(p => (
+            <span class="product-pill">
+              {p.hot && <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>}
+              <span class="font-semibold text-gray-900">{p.name}</span>
+              {p.cat && <span class="text-gray-400">· {p.cat}</span>}
+            </span>
+          ))}
+        </div>
+
+        {/* Featured cards */}
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {[
+            {
+              name: 'Semaglutide',
+              cat: 'Weight Management',
+              badge: 'Top Seller',
+              badgeColor: 'bg-amber-100 text-amber-700',
+              desc: 'GLP-1 receptor agonist for sustainable weight loss. The single most in-demand peptide in the consumer health market right now.',
+              icon: 'fa-weight',
+            },
+            {
+              name: 'BPC-157',
+              cat: 'Recovery & Healing',
+              badge: 'High Repeat Rate',
+              badgeColor: 'bg-green-100 text-green-700',
+              desc: 'Body Protection Compound for accelerated tissue repair, gut healing, and injury recovery. Loved by athletes and biohackers alike.',
+              icon: 'fa-heartbeat',
+            },
+            {
+              name: 'CJC-1295 / Ipamorelin',
+              cat: 'Anti-Aging & Longevity',
+              badge: 'Growing Trend',
+              badgeColor: 'bg-violet-100 text-violet-700',
+              desc: 'GH secretagogue combination for lean mass preservation, improved sleep quality, fat reduction, and cellular rejuvenation.',
+              icon: 'fa-dna',
+            },
+          ].map(p => (
+            <div class="card-clean p-6">
+              <div class="flex items-start justify-between mb-4">
+                <div class="w-10 h-10 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center">
+                  <i class={`fas ${p.icon} text-green-600`}></i>
+                </div>
+                <span class={`text-xs font-semibold px-3 py-1 rounded-full ${p.badgeColor}`}>{p.badge}</span>
+              </div>
+              <p class="label-caps mb-1">{p.cat}</p>
+              <h3 class="font-bold text-gray-900 text-lg mb-3">{p.name}</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">{p.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-8 flex items-center gap-4">
+          <a href="/apply" class="btn-outline-black">Request Full Catalog</a>
+          <span class="text-sm text-gray-400">No commitment required</span>
+        </div>
+      </div>
+    </section>
+
+    {/* ═══════════════════════════════════════
+        WHY US — white, 3-col features
+    ═══════════════════════════════════════ */}
+    <section id="why-us" class="section-white py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="max-w-2xl mb-16">
+          <span class="label-caps block mb-3">Why Plug & Play Peptides</span>
+          <h2 class="display-sans text-gray-900 mb-4" style="font-size:clamp(2rem,4vw,3rem);">
+            Built for the<br />people selling health.
           </h2>
-          <p class="text-slate-400 text-lg max-w-2xl mx-auto">
-            From longevity to weight loss to performance — our catalog covers the most in-demand peptide protocols.
+          <p class="text-gray-500 text-lg leading-relaxed">
+            The peptide market is one of the fastest-growing segments in health. We're the only end-to-end white-label platform that lets you enter it cleanly, compliantly, and profitably.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { name: 'Semaglutide', category: 'Weight Management', icon: 'fa-weight', badge: 'Top Seller', badgeColor: 'bg-amber-500', desc: 'GLP-1 receptor agonist for sustainable weight loss. The #1 most-requested peptide in the market.' },
-            { name: 'Tirzepatide', category: 'Weight Management', icon: 'fa-fire', badge: 'Hot', badgeColor: 'bg-rose-500', desc: 'Dual GIP/GLP-1 agonist for superior weight reduction with improved metabolic outcomes.' },
-            { name: 'BPC-157', category: 'Recovery & Healing', icon: 'fa-heartbeat', badge: 'Popular', badgeColor: 'bg-emerald-500', desc: 'Body Protection Compound for accelerated tissue repair, gut healing, and injury recovery.' },
-            { name: 'TB-500', category: 'Recovery & Performance', icon: 'fa-running', badge: '', badgeColor: '', desc: 'Thymosin Beta-4 for enhanced muscle recovery, reduced inflammation, and improved flexibility.' },
-            { name: 'CJC-1295 / Ipamorelin', category: 'Anti-Aging & Longevity', icon: 'fa-dna', badge: 'Trending', badgeColor: 'bg-violet-500', desc: 'Growth hormone secretagogue stack for lean mass, fat loss, improved sleep, and anti-aging.' },
-            { name: 'PT-141', category: 'Sexual Health', icon: 'fa-heart', badge: '', badgeColor: '', desc: 'Bremelanotide for sexual health and libido enhancement in both men and women.' },
-            { name: 'Sermorelin', category: 'Anti-Aging', icon: 'fa-clock', badge: '', badgeColor: '', desc: 'GH-releasing hormone analog for improved sleep, body composition, and vitality.' },
-            { name: 'Epithalon', category: 'Longevity', icon: 'fa-infinity', badge: 'New', badgeColor: 'bg-teal-500', desc: 'Telomere-activating tetrapeptide for cellular rejuvenation and longevity optimization.' },
-            { name: 'Melanotan II', category: 'Tanning & Libido', icon: 'fa-sun', badge: '', badgeColor: '', desc: 'Alpha-MSH analog for UV-protective melanin production and libido enhancement.' },
-          ].map((product) => (
-            <div class="card-hover bg-slate-800/40 border border-slate-700 rounded-2xl p-5 relative">
-              {product.badge && (
-                <span class={`absolute top-4 right-4 ${product.badgeColor} text-white text-xs font-bold px-2.5 py-1 rounded-full`}>{product.badge}</span>
-              )}
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
-                  <i class={`fas ${product.icon} text-emerald-400`}></i>
-                </div>
-                <div>
-                  <h4 class="text-white font-bold">{product.name}</h4>
-                  <span class="text-emerald-400/70 text-xs">{product.category}</span>
-                </div>
+            { icon: 'fa-user-md', title: 'Licensed Physician Network', body: 'Every product flows through board-certified physicians in our network. Prescriptions, consultations, dispensing — all managed.' },
+            { icon: 'fa-flask', title: 'Pharmaceutical-Grade Quality', body: 'Sourced exclusively from licensed, inspected compounding pharmacies. COAs available for every batch. No shortcuts.' },
+            { icon: 'fa-laptop-medical', title: 'Branded Patient Portal', body: 'Your audience shops at your URL. A fully white-labeled telehealth portal with your name, logo, and brand.' },
+            { icon: 'fa-shipping-fast', title: 'Nationwide Fulfillment', body: 'Discreet, temperature-controlled shipping direct to patients across the US with real-time order tracking.' },
+            { icon: 'fa-graduation-cap', title: 'Partner Education Library', body: 'Medical content, compliance guides, marketing assets, and messaging templates — everything you need to sell confidently.' },
+            { icon: 'fa-expand-arrows-alt', title: 'Scales With You', body: 'From 10 orders to 10,000 a month — the infrastructure handles it. Your support team grows with your volume.' },
+          ].map(f => (
+            <div class="p-6">
+              <div class="w-10 h-10 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center mb-4">
+                <i class={`fas ${f.icon} text-green-600 text-sm`}></i>
               </div>
-              <p class="text-slate-400 text-sm leading-relaxed">{product.desc}</p>
+              <h3 class="font-bold text-gray-900 mb-2">{f.title}</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">{f.body}</p>
             </div>
           ))}
         </div>
 
-        <div class="text-center mt-10">
-          <p class="text-slate-400 mb-4">Full catalog includes 20+ products. More added quarterly.</p>
-          <a href="/apply" class="btn-outline font-bold px-8 py-3 rounded-xl text-sm inline-flex items-center">
-            <i class="fas fa-list mr-2"></i>Request Full Catalog
-          </a>
+        {/* Compliance callout */}
+        <div class="mt-12 bg-gray-950 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center gap-6">
+          <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center flex-shrink-0">
+            <i class="fas fa-shield-alt text-green-400 text-xl"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-white font-bold text-lg mb-2">100% compliant. Your liability is zero.</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Every product is prescribed by a licensed physician and dispensed by an FDA-registered compounding pharmacy. Our legal team monitors the regulatory landscape continuously — so your brand never has to.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 md:flex-col">
+            {['Licensed Pharmacies', 'Board-Certified MDs', 'HIPAA Compliant', 'State-Licensed'].map(b => (
+              <span class="inline-flex items-center gap-1.5 bg-gray-800 text-gray-300 text-xs font-medium px-3 py-1.5 rounded-full">
+                <i class="fas fa-check text-green-400" style="font-size:9px"></i>{b}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>
 
-    {/* ===== TESTIMONIALS ===== */}
-    <section class="py-24 bg-slate-950">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <div class="inline-flex items-center tag-pill rounded-full px-4 py-1.5 text-sm font-medium mb-4">
-            <i class="fas fa-quote-left mr-2 text-xs"></i>Partner Voices
-          </div>
-          <h2 class="text-4xl font-extrabold text-white mb-4">
-            What Our Partners <span class="gradient-text">Are Saying</span>
+    {/* ═══════════════════════════════════════
+        TESTIMONIALS — cream
+    ═══════════════════════════════════════ */}
+    <section class="section-cream py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="max-w-xl mb-14">
+          <span class="label-caps block mb-3">Partner Stories</span>
+          <h2 class="display-sans text-gray-900" style="font-size:clamp(2rem,4vw,3rem);">
+            What partners<br />are saying.
           </h2>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             {
-              quote: "I launched my own peptide brand in under 3 weeks. The first month I did $22K in revenue. My audience was already asking for this — Plug & Play just made it real.",
+              quote: "I launched my peptide brand in under 3 weeks. First month was $22K in revenue. My audience was already asking for this — Plug & Play made it real.",
               name: 'Alex M.',
-              role: 'Fitness Influencer, 800K Followers',
-              avatar: 'A',
-              gradient: 'from-emerald-400 to-teal-500',
+              role: 'Fitness Creator, 800K followers',
+              initial: 'A',
             },
             {
-              quote: "We integrated their platform into our med spa and added $45K/month in recurring revenue without hiring a single new staff member. The physician network handles everything.",
+              quote: "We added $45K/month in recurring revenue to our med spa without hiring a single new staff member. The physician network handles all the clinical work.",
               name: 'Dr. Sarah K.',
               role: 'Medical Spa Owner, Miami FL',
-              avatar: 'S',
-              gradient: 'from-violet-400 to-purple-500',
+              initial: 'S',
             },
             {
-              quote: "I was skeptical about compliance, but their legal structure is bulletproof. Every patient goes through a doctor. I just promote and earn — it's a completely hands-off income stream.",
+              quote: "The compliance structure is bulletproof. Every patient sees a doctor. I just promote my brand and earn — it's a completely hands-off income stream.",
               name: 'Jordan T.',
-              role: 'Biohacking Creator, 1.2M Followers',
-              avatar: 'J',
-              gradient: 'from-amber-400 to-orange-500',
+              role: 'Biohacking Creator, 1.2M followers',
+              initial: 'J',
             },
-          ].map((t) => (
-            <div class="testimonial-card rounded-2xl p-6 card-hover">
+          ].map(t => (
+            <div class="card-clean p-6 md:p-8">
               <div class="flex mb-4">
-                {[1,2,3,4,5].map(() => <i class="fas fa-star text-amber-400 text-sm mr-0.5"></i>)}
+                {[1,2,3,4,5].map(() => <span class="text-amber-400 text-sm mr-0.5">★</span>)}
               </div>
-              <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">"{t.quote}"</p>
-              <div class="flex items-center gap-3">
-                <div class={`w-10 h-10 rounded-full bg-gradient-to-br ${t.gradient} flex items-center justify-center text-white font-bold text-sm flex-shrink-0`}>{t.avatar}</div>
+              <p class="text-gray-700 text-base leading-relaxed mb-6">"{t.quote}"</p>
+              <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                <div class="w-9 h-9 rounded-full bg-gray-900 text-white text-sm font-bold flex items-center justify-center flex-shrink-0">
+                  {t.initial}
+                </div>
                 <div>
-                  <p class="text-white font-semibold text-sm">{t.name}</p>
-                  <p class="text-slate-500 text-xs">{t.role}</p>
+                  <p class="font-semibold text-gray-900 text-sm">{t.name}</p>
+                  <p class="text-gray-400 text-xs">{t.role}</p>
                 </div>
               </div>
             </div>
@@ -548,33 +483,45 @@ export const homePage = () => (
       </div>
     </section>
 
-    {/* ===== FINAL CTA ===== */}
-    <section class="py-24 bg-slate-900">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="bg-gradient-to-br from-emerald-900/30 via-slate-800 to-teal-900/30 border border-emerald-500/20 rounded-3xl p-12 glow-green">
-          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mx-auto mb-6">
-            <i class="fas fa-dna text-white text-2xl"></i>
-          </div>
-          <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
-            Ready to Launch<br /><span class="gradient-text">Your Peptide Brand?</span>
-          </h2>
-          <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-            Join the growing network of businesses and influencers earning with their own white-label peptide lines. Applications take less than 5 minutes.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/apply?type=business" class="btn-primary text-white font-bold px-8 py-4 rounded-xl text-base inline-flex items-center justify-center">
-              <i class="fas fa-building mr-2"></i>I'm a Business
-            </a>
-            <a href="/apply?type=influencer" class="bg-slate-700 hover:bg-slate-600 text-white font-bold px-8 py-4 rounded-xl text-base inline-flex items-center justify-center transition-all duration-300 hover:transform hover:-translate-y-1">
-              <i class="fas fa-star mr-2"></i>I'm an Influencer
-            </a>
-          </div>
-          <p class="text-slate-500 text-sm mt-6">
-            <i class="fas fa-lock mr-1"></i>
-            Your application is confidential. No commitment required.
-          </p>
+    {/* ═══════════════════════════════════════
+        FINAL CTA — black
+    ═══════════════════════════════════════ */}
+    <section class="section-black py-24">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <span class="tag-green mb-6 mx-auto"><i class="fas fa-circle text-green-500" style="font-size:6px"></i>Applications Open</span>
+        <h2 class="display-serif text-white mb-6 mx-auto block" style="font-size:clamp(2.5rem,5vw,4.5rem);">
+          Ready to launch<br />your peptide brand?
+        </h2>
+        <p class="text-gray-400 text-lg leading-relaxed mb-10 max-w-lg mx-auto">
+          Join 50+ brands and creators already earning with their own white-label peptide lines. Applications take less than 5 minutes.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href="/apply?type=business" class="btn-green w-full sm:w-auto justify-center">
+            <i class="fas fa-building"></i> I'm a Business
+          </a>
+          <a href="/apply?type=influencer" class="btn-outline-black w-full sm:w-auto justify-center" style="border-color:#fff;color:#fff;" onmouseover="this.style.background='#fff';this.style.color='#111'" onmouseout="this.style.background='transparent';this.style.color='#fff'">
+            <i class="fas fa-star"></i> I'm a Creator
+          </a>
         </div>
+        <p class="text-gray-600 text-sm mt-6">
+          <i class="fas fa-lock text-xs mr-1"></i>Confidential application · No commitment required
+        </p>
       </div>
     </section>
+
+    <script dangerouslySetInnerHTML={{ __html: `
+      // Scroll shadow for nav
+      const header = document.getElementById('site-header');
+      window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 10);
+      });
+
+      // Fade-up on scroll
+      const fadeEls = document.querySelectorAll('.fade-up');
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+      }, { threshold: 0.1 });
+      fadeEls.forEach(el => obs.observe(el));
+    ` }} />
   </>
 )

@@ -1,42 +1,250 @@
-/* Plug and Play Peptides - Custom CSS */
-/* All main styling is handled via Tailwind CDN + inline styles in renderer.tsx */
+/* Plug and Play Peptides — Hims-inspired design system */
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: #fff; color: #111; }
+
+/* ── TYPOGRAPHY ── */
+.display-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+.display-sans {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+.label-caps {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6b7280;
 }
 
-/* Custom checkbox styling */
-input[type="checkbox"] {
-  accent-color: #10b981;
+/* ── BUTTONS ── */
+.btn-black {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #111;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 13px 26px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-black:hover { background: #333; transform: translateY(-1px); }
+
+.btn-outline-black {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #111;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: 100px;
+  border: 1.5px solid #111;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+.btn-outline-black:hover { background: #111; color: #fff; }
+
+.btn-green {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #16a34a;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 13px 26px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  text-decoration: none;
+}
+.btn-green:hover { background: #15803d; transform: translateY(-1px); }
+
+/* ── SECTIONS ── */
+.section-cream { background: #F7F6F2; }
+.section-white { background: #ffffff; }
+.section-black { background: #0f0f0f; }
+.section-green { background: #F0FAF4; }
+
+/* ── CARDS ── */
+.card-clean {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.card-clean:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); transform: translateY(-3px); }
+
+.card-cream {
+  background: #F7F6F2;
+  border-radius: 16px;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.card-cream:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.06); transform: translateY(-3px); }
+
+.card-black {
+  background: #111;
+  border-radius: 16px;
+  color: #fff;
 }
 
-/* Custom select arrow */
-select {
+/* ── NUMBER BADGES ── */
+.step-num {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #f3f4f6;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.04em;
+  user-select: none;
+}
+
+/* ── TAGS ── */
+.tag-green {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #dcfce7;
+  color: #16a34a;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+.tag-gray {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f3f4f6;
+  color: #6b7280;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+
+/* ── DIVIDERS ── */
+.divider { border-top: 1px solid #f0f0f0; }
+.divider-dark { border-top: 1px solid #1f1f1f; }
+
+/* ── FORM ELEMENTS ── */
+.input-clean {
+  width: 100%;
+  background: #fff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 13px 16px;
+  font-size: 0.9rem;
+  color: #111;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+}
+.input-clean::placeholder { color: #9ca3af; }
+.input-clean:focus { border-color: #111; box-shadow: 0 0 0 3px rgba(0,0,0,0.06); }
+
+select.input-clean {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%2364748b' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 12px center;
-  background-size: 16px;
-  padding-right: 40px !important;
+  background-position: right 14px center;
+  background-size: 18px;
+  padding-right: 42px;
 }
 
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #0f172a;
-}
-::-webkit-scrollbar-thumb {
-  background: #334155;
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #10b981;
+textarea.input-clean { resize: none; }
+
+input[type="checkbox"] { accent-color: #111; width: 16px; height: 16px; cursor: pointer; }
+
+/* ── NAV SCROLL ── */
+#site-header.scrolled { box-shadow: 0 1px 20px rgba(0,0,0,0.07); }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f9f9f9; }
+::-webkit-scrollbar-thumb { background: #ddd; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #aaa; }
+
+/* ── SECTION ANCHORS (offset for fixed nav) ── */
+section[id] { scroll-margin-top: 80px; }
+
+/* ── STAT NUMBER ── */
+.stat-big {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #111;
 }
 
-/* Anchor offset for fixed nav */
-section[id] {
-  scroll-margin-top: 72px;
+/* ── DOCTOR CARD ── */
+.doctor-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px 16px;
 }
+
+/* ── MARQUEE ── */
+.marquee-track {
+  display: flex;
+  gap: 2rem;
+  animation: marquee 22s linear infinite;
+  white-space: nowrap;
+}
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-wrap { overflow: hidden; }
+.marquee-wrap:hover .marquee-track { animation-play-state: paused; }
+
+/* ── PRODUCT PILL ── */
+.product-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 100px;
+  padding: 7px 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #374151;
+  background: #fff;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  cursor: default;
+}
+.product-pill:hover { border-color: #111; color: #111; background: #f9f9f9; }
+
+/* ── FADE-IN ANIMATION ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }

@@ -1,374 +1,291 @@
 export const applyPage = () => (
   <>
-    {/* ===== APPLY HERO ===== */}
-    <section class="hero-bg py-20">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="inline-flex items-center tag-pill rounded-full px-4 py-1.5 text-sm font-medium mb-6">
-          <i class="fas fa-rocket mr-2 text-xs"></i>Partner Application
-        </div>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
-          Apply to Become a<br /><span class="gradient-text">Plug & Play Partner</span>
-        </h1>
-        <p class="text-slate-300 text-lg max-w-2xl mx-auto">
-          Complete the form below and our team will review your application and reach out within <strong class="text-white">48 hours</strong>.
-        </p>
+    <section class="section-white py-20">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
-        <div class="flex flex-wrap justify-center gap-6 mt-8">
-          {[
-            { icon: 'fa-clock', text: '5-Minute Application' },
-            { icon: 'fa-lock', text: '100% Confidential' },
-            { icon: 'fa-headset', text: 'Dedicated Partner Manager' },
-          ].map((item) => (
-            <div class="flex items-center gap-2 text-slate-300 text-sm">
-              <i class={`fas ${item.icon} text-emerald-400`}></i>
-              <span>{item.text}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+          {/* ── LEFT: Context panel ── */}
+          <div class="lg:sticky lg:top-24">
+            <span class="label-caps block mb-4">Partner Application</span>
+            <h1 class="display-sans text-gray-900 mb-5" style="font-size:clamp(2rem,4vw,3.25rem);">
+              Let's build your<br />peptide brand.
+            </h1>
+            <p class="text-gray-500 text-lg leading-relaxed mb-10">
+              Complete the form and our team will review your application and reach out within <strong class="text-gray-900">48 hours</strong>.
+            </p>
 
-    {/* ===== APPLY FORM ===== */}
-    <section class="py-16 bg-slate-900">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Partner Type Selector */}
-        <div class="flex gap-4 mb-8 p-1 bg-slate-800 rounded-xl">
-          <button
-            id="btn-business"
-            onclick="selectType('business')"
-            class="flex-1 py-3 px-4 rounded-lg font-semibold text-sm transition-all duration-300 flex items-center justify-center gap-2 bg-emerald-600 text-white"
-          >
-            <i class="fas fa-building"></i>Business / Brand
-          </button>
-          <button
-            id="btn-influencer"
-            onclick="selectType('influencer')"
-            class="flex-1 py-3 px-4 rounded-lg font-semibold text-sm transition-all duration-300 flex items-center justify-center gap-2 text-slate-400 hover:text-white"
-          >
-            <i class="fas fa-star"></i>Influencer / Creator
-          </button>
-        </div>
-
-        {/* Form */}
-        <form id="apply-form" class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 space-y-6">
-          <input type="hidden" id="partner-type" name="partnerType" value="business" />
-
-          {/* Name Row */}
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label class="block text-slate-300 text-sm font-medium mb-2">First Name <span class="text-emerald-400">*</span></label>
-              <input
-                type="text"
-                name="firstName"
-                required
-                placeholder="John"
-                class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 text-sm transition-all duration-200"
-              />
-            </div>
-            <div>
-              <label class="block text-slate-300 text-sm font-medium mb-2">Last Name <span class="text-emerald-400">*</span></label>
-              <input
-                type="text"
-                name="lastName"
-                required
-                placeholder="Doe"
-                class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 text-sm transition-all duration-200"
-              />
-            </div>
-          </div>
-
-          {/* Email & Phone */}
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label class="block text-slate-300 text-sm font-medium mb-2">Email Address <span class="text-emerald-400">*</span></label>
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="john@yourbrand.com"
-                class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 text-sm transition-all duration-200"
-              />
-            </div>
-            <div>
-              <label class="block text-slate-300 text-sm font-medium mb-2">Phone Number</label>
-              <input
-                type="tel"
-                name="phone"
-                placeholder="+1 (555) 000-0000"
-                class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 text-sm transition-all duration-200"
-              />
-            </div>
-          </div>
-
-          {/* Business Fields */}
-          <div id="business-fields">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-slate-300 text-sm font-medium mb-2">Business / Brand Name <span class="text-emerald-400">*</span></label>
-                <input
-                  type="text"
-                  name="businessName"
-                  placeholder="Your Brand LLC"
-                  class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 text-sm transition-all duration-200"
-                />
-              </div>
-              <div>
-                <label class="block text-slate-300 text-sm font-medium mb-2">Business Type <span class="text-emerald-400">*</span></label>
-                <select
-                  name="businessType"
-                  class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm transition-all duration-200"
-                >
-                  <option value="" class="text-slate-500">Select type...</option>
-                  <option value="wellness-clinic">Wellness / Med Spa Clinic</option>
-                  <option value="supplement-brand">Supplement Brand</option>
-                  <option value="fitness-gym">Fitness / Gym Brand</option>
-                  <option value="telehealth">Telehealth Company</option>
-                  <option value="ecommerce">Health E-Commerce</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="mt-6">
-              <label class="block text-slate-300 text-sm font-medium mb-2">Website / Social Media URL</label>
-              <input
-                type="url"
-                name="website"
-                placeholder="https://yourbrand.com"
-                class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 text-sm transition-all duration-200"
-              />
-            </div>
-
-            <div class="mt-6">
-              <label class="block text-slate-300 text-sm font-medium mb-2">Monthly Customer Volume (estimate)</label>
-              <select
-                name="monthlyVolume"
-                class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm transition-all duration-200"
-              >
-                <option value="">Select range...</option>
-                <option value="under-100">Under 100 customers/month</option>
-                <option value="100-500">100–500 customers/month</option>
-                <option value="500-2000">500–2,000 customers/month</option>
-                <option value="2000-10000">2,000–10,000 customers/month</option>
-                <option value="over-10000">10,000+ customers/month</option>
-              </select>
-            </div>
-          </div>
-
-          {/* Influencer Fields */}
-          <div id="influencer-fields" class="hidden">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-slate-300 text-sm font-medium mb-2">Primary Platform <span class="text-emerald-400">*</span></label>
-                <select
-                  name="platform"
-                  class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm transition-all duration-200"
-                >
-                  <option value="">Select platform...</option>
-                  <option value="instagram">Instagram</option>
-                  <option value="tiktok">TikTok</option>
-                  <option value="youtube">YouTube</option>
-                  <option value="twitter">Twitter / X</option>
-                  <option value="podcast">Podcast</option>
-                  <option value="multiple">Multiple Platforms</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-slate-300 text-sm font-medium mb-2">Total Follower Count <span class="text-emerald-400">*</span></label>
-                <select
-                  name="followers"
-                  class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm transition-all duration-200"
-                >
-                  <option value="">Select range...</option>
-                  <option value="10k-50k">10K – 50K</option>
-                  <option value="50k-200k">50K – 200K</option>
-                  <option value="200k-500k">200K – 500K</option>
-                  <option value="500k-2m">500K – 2M</option>
-                  <option value="2m+">2M+</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="mt-6">
-              <label class="block text-slate-300 text-sm font-medium mb-2">Primary Content Niche <span class="text-emerald-400">*</span></label>
-              <select
-                name="niche"
-                class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm transition-all duration-200"
-              >
-                <option value="">Select niche...</option>
-                <option value="fitness">Fitness & Bodybuilding</option>
-                <option value="biohacking">Biohacking & Longevity</option>
-                <option value="weight-loss">Weight Loss & Nutrition</option>
-                <option value="anti-aging">Anti-Aging & Wellness</option>
-                <option value="mens-health">Men's Health</option>
-                <option value="womens-health">Women's Health</option>
-                <option value="medical">Medical / Healthcare</option>
-                <option value="lifestyle">Lifestyle & Health</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <div class="mt-6">
-              <label class="block text-slate-300 text-sm font-medium mb-2">Profile / Channel URL <span class="text-emerald-400">*</span></label>
-              <input
-                type="url"
-                name="profileUrl"
-                placeholder="https://instagram.com/yourhandle"
-                class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 text-sm transition-all duration-200"
-              />
-            </div>
-          </div>
-
-          {/* Products of Interest */}
-          <div>
-            <label class="block text-slate-300 text-sm font-medium mb-3">Products of Interest (select all that apply)</label>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {/* What happens next */}
+            <div class="space-y-5 mb-10">
               {[
-                'Semaglutide', 'Tirzepatide', 'BPC-157', 'TB-500',
-                'CJC-1295 / Ipamorelin', 'PT-141', 'Sermorelin', 'Epithalon', 'Other / Full Catalog'
-              ].map((product) => (
-                <label class="flex items-center gap-2 cursor-pointer group">
-                  <input
-                    type="checkbox"
-                    name="products"
-                    value={product}
-                    class="w-4 h-4 rounded border-slate-600 bg-slate-900 text-emerald-500 focus:ring-emerald-500 cursor-pointer"
-                  />
-                  <span class="text-slate-400 text-sm group-hover:text-slate-200 transition-colors">{product}</span>
-                </label>
+                { n: '1', title: 'We review your application', body: 'Our partnership team assesses your brand, audience, and goals within 48 hours.' },
+                { n: '2', title: 'Intro call — 20 minutes', body: "Quick discovery call to understand your vision and walk you through the platform." },
+                { n: '3', title: 'Your brand goes live', body: 'Once approved, your branded patient portal and product line launches in 2–4 weeks.' },
+              ].map(step => (
+                <div class="flex gap-4">
+                  <div class="w-7 h-7 rounded-full bg-gray-900 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{step.n}</div>
+                  <div>
+                    <p class="font-semibold text-gray-900 text-sm mb-0.5">{step.title}</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">{step.body}</p>
+                  </div>
+                </div>
               ))}
             </div>
-          </div>
 
-          {/* Goals / Message */}
-          <div>
-            <label class="block text-slate-300 text-sm font-medium mb-2">Tell Us About Your Goals</label>
-            <textarea
-              name="message"
-              rows={4}
-              placeholder="Briefly describe your audience, what you're looking to achieve with a peptide brand, and any questions you have..."
-              class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 text-sm transition-all duration-200 resize-none"
-            ></textarea>
-          </div>
-
-          {/* How did you hear? */}
-          <div>
-            <label class="block text-slate-300 text-sm font-medium mb-2">How did you hear about us?</label>
-            <select
-              name="referralSource"
-              class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm transition-all duration-200"
-            >
-              <option value="">Select...</option>
-              <option value="instagram">Instagram</option>
-              <option value="tiktok">TikTok</option>
-              <option value="google">Google Search</option>
-              <option value="referral">Referral / Friend</option>
-              <option value="podcast">Podcast</option>
-              <option value="conference">Conference / Event</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-
-          {/* Agreement */}
-          <div class="bg-slate-900/60 rounded-xl p-4">
-            <label class="flex items-start gap-3 cursor-pointer">
-              <input
-                type="checkbox"
-                name="agree"
-                required
-                class="w-4 h-4 mt-0.5 rounded border-slate-600 bg-slate-900 text-emerald-500 focus:ring-emerald-500 cursor-pointer flex-shrink-0"
-              />
-              <span class="text-slate-400 text-xs leading-relaxed">
-                I understand that Plug & Play Peptides operates through licensed physicians and compounding pharmacies. All product dispensing is subject to physician approval and prescription. I agree to promote products truthfully and in compliance with applicable laws. I consent to being contacted regarding my application.
-              </span>
-            </label>
-          </div>
-
-          {/* Submit */}
-          <button
-            type="submit"
-            id="submit-btn"
-            class="btn-primary w-full text-white font-bold py-4 rounded-xl text-base flex items-center justify-center gap-2"
-          >
-            <i class="fas fa-paper-plane"></i>
-            Submit My Application
-          </button>
-
-          <p class="text-center text-slate-500 text-xs">
-            <i class="fas fa-lock mr-1"></i>
-            Your application is 100% confidential. No commitment required.
-          </p>
-        </form>
-
-        {/* Success Message (hidden) */}
-        <div id="success-message" class="hidden bg-emerald-900/30 border border-emerald-500/30 rounded-2xl p-10 text-center mt-4">
-          <div class="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center mx-auto mb-4">
-            <i class="fas fa-check text-emerald-400 text-2xl"></i>
-          </div>
-          <h3 class="text-white font-bold text-2xl mb-3">Application Received!</h3>
-          <p class="text-slate-300 mb-2">Thank you for applying to partner with Plug & Play Peptides.</p>
-          <p class="text-slate-400 text-sm mb-6">Our team will review your application and reach out within <strong class="text-white">48 business hours</strong>.</p>
-          <a href="/" class="btn-primary text-white font-semibold px-6 py-3 rounded-xl text-sm inline-flex items-center gap-2">
-            <i class="fas fa-home"></i>Return Home
-          </a>
-        </div>
-      </div>
-    </section>
-
-    {/* ===== TRUST SECTION ===== */}
-    <section class="py-16 bg-slate-950">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h3 class="text-white font-bold text-xl mb-8">What Happens After You Apply?</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            { icon: 'fa-envelope-open-text', step: '1', title: 'Application Review', desc: 'Our partnership team reviews your application within 48 hours.' },
-            { icon: 'fa-phone-alt', step: '2', title: 'Intro Call', desc: 'We schedule a quick 20-minute discovery call to understand your goals.' },
-            { icon: 'fa-rocket', step: '3', title: 'Launch in 2–4 Weeks', desc: 'Once approved, your brand is live and generating revenue within weeks.' },
-          ].map((item) => (
-            <div class="bg-slate-800/40 border border-slate-700 rounded-2xl p-6">
-              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mx-auto mb-4">
-                <i class={`fas ${item.icon} text-emerald-400`}></i>
-              </div>
-              <h4 class="text-white font-semibold mb-2">{item.title}</h4>
-              <p class="text-slate-400 text-sm">{item.desc}</p>
+            {/* Trust badges */}
+            <div class="p-5 bg-gray-50 rounded-2xl border border-gray-100">
+              <p class="label-caps mb-3">Our commitments to you</p>
+              <ul class="space-y-2">
+                {[
+                  'Application is 100% confidential',
+                  'No exclusivity or commitment required',
+                  'Dedicated partner manager assigned',
+                  'Full compliance handled by our team',
+                ].map(item => (
+                  <li class="flex items-center gap-2 text-sm text-gray-600">
+                    <i class="fas fa-check text-green-500 text-xs flex-shrink-0"></i>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
-          ))}
+
+            {/* Social proof */}
+            <div class="mt-6 flex items-center gap-3">
+              <div class="flex -space-x-2">
+                {['bg-gray-800','bg-gray-600','bg-gray-700','bg-gray-900'].map((c,i) => (
+                  <div class={`w-8 h-8 rounded-full ${c} border-2 border-white flex items-center justify-center text-white text-xs font-bold`}>
+                    {['A','J','S','K'][i]}
+                  </div>
+                ))}
+              </div>
+              <p class="text-sm text-gray-500"><strong class="text-gray-900">50+ brands</strong> already partnered</p>
+            </div>
+          </div>
+
+          {/* ── RIGHT: Form ── */}
+          <div>
+            {/* Type Tabs */}
+            <div class="flex p-1 bg-gray-100 rounded-xl mb-7 gap-1">
+              <button id="btn-business" onclick="selectType('business')"
+                class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-semibold transition-all duration-200 bg-white text-gray-900 shadow-sm">
+                <i class="fas fa-building text-xs"></i>Business / Brand
+              </button>
+              <button id="btn-influencer" onclick="selectType('influencer')"
+                class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-semibold transition-all duration-200 text-gray-500 hover:text-gray-700">
+                <i class="fas fa-star text-xs"></i>Creator / Influencer
+              </button>
+            </div>
+
+            <form id="apply-form" class="space-y-5">
+              <input type="hidden" id="partner-type" name="partnerType" value="business" />
+
+              {/* Name row */}
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1.5">First name <span class="text-green-500">*</span></label>
+                  <input type="text" name="firstName" required placeholder="John" class="input-clean" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1.5">Last name <span class="text-green-500">*</span></label>
+                  <input type="text" name="lastName" required placeholder="Doe" class="input-clean" />
+                </div>
+              </div>
+
+              {/* Email & Phone */}
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1.5">Email <span class="text-green-500">*</span></label>
+                  <input type="email" name="email" required placeholder="you@yourbrand.com" class="input-clean" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1.5">Phone</label>
+                  <input type="tel" name="phone" placeholder="+1 (555) 000-0000" class="input-clean" />
+                </div>
+              </div>
+
+              {/* ── BUSINESS FIELDS ── */}
+              <div id="business-fields">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1.5">Business / Brand name <span class="text-green-500">*</span></label>
+                    <input type="text" name="businessName" placeholder="Acme Wellness LLC" class="input-clean" />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1.5">Business type <span class="text-green-500">*</span></label>
+                    <select name="businessType" class="input-clean">
+                      <option value="">Select...</option>
+                      <option>Wellness / Med Spa Clinic</option>
+                      <option>Supplement Brand</option>
+                      <option>Fitness / Gym Brand</option>
+                      <option>Telehealth Company</option>
+                      <option>Health E-Commerce</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label class="block text-sm font-medium text-gray-700 mb-1.5">Website / Social URL</label>
+                  <input type="url" name="website" placeholder="https://yourbrand.com" class="input-clean" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1.5">Monthly customer volume</label>
+                  <select name="monthlyVolume" class="input-clean">
+                    <option value="">Select range...</option>
+                    <option>Under 100 / month</option>
+                    <option>100 – 500 / month</option>
+                    <option>500 – 2,000 / month</option>
+                    <option>2,000 – 10,000 / month</option>
+                    <option>10,000+ / month</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* ── INFLUENCER FIELDS ── */}
+              <div id="influencer-fields" class="hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1.5">Primary platform <span class="text-green-500">*</span></label>
+                    <select name="platform" class="input-clean">
+                      <option value="">Select...</option>
+                      <option>Instagram</option>
+                      <option>TikTok</option>
+                      <option>YouTube</option>
+                      <option>Twitter / X</option>
+                      <option>Podcast</option>
+                      <option>Multiple Platforms</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1.5">Total followers <span class="text-green-500">*</span></label>
+                    <select name="followers" class="input-clean">
+                      <option value="">Select range...</option>
+                      <option>10K – 50K</option>
+                      <option>50K – 200K</option>
+                      <option>200K – 500K</option>
+                      <option>500K – 2M</option>
+                      <option>2M+</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label class="block text-sm font-medium text-gray-700 mb-1.5">Content niche <span class="text-green-500">*</span></label>
+                  <select name="niche" class="input-clean">
+                    <option value="">Select...</option>
+                    <option>Fitness & Bodybuilding</option>
+                    <option>Biohacking & Longevity</option>
+                    <option>Weight Loss & Nutrition</option>
+                    <option>Anti-Aging & Wellness</option>
+                    <option>Men's Health</option>
+                    <option>Women's Health</option>
+                    <option>Medical / Healthcare</option>
+                    <option>Lifestyle & Health</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1.5">Profile URL <span class="text-green-500">*</span></label>
+                  <input type="url" name="profileUrl" placeholder="https://instagram.com/yourhandle" class="input-clean" />
+                </div>
+              </div>
+
+              {/* Products of interest */}
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-3">Products of interest <span class="text-gray-400 font-normal">(select all that apply)</span></label>
+                <div class="grid grid-cols-2 gap-2">
+                  {['Semaglutide', 'Tirzepatide', 'BPC-157', 'TB-500', 'CJC-1295 / Ipamorelin', 'PT-141', 'Sermorelin', 'Epithalon', 'Full Catalog'].map(p => (
+                    <label class="flex items-center gap-2.5 p-3 rounded-xl border border-gray-200 cursor-pointer hover:border-gray-400 hover:bg-gray-50 transition-colors group">
+                      <input type="checkbox" name="products" value={p} class="flex-shrink-0" />
+                      <span class="text-sm text-gray-600 group-hover:text-gray-900">{p}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* Message */}
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1.5">Tell us about your goals</label>
+                <textarea name="message" rows={4} placeholder="Describe your audience, what you want to achieve, and any questions you have..." class="input-clean"></textarea>
+              </div>
+
+              {/* Referral */}
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1.5">How did you hear about us?</label>
+                <select name="referralSource" class="input-clean">
+                  <option value="">Select...</option>
+                  <option>Instagram</option>
+                  <option>TikTok</option>
+                  <option>Google Search</option>
+                  <option>Referral / Friend</option>
+                  <option>Podcast</option>
+                  <option>Conference / Event</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              {/* Legal agreement */}
+              <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                <label class="flex items-start gap-3 cursor-pointer">
+                  <input type="checkbox" name="agree" required class="mt-0.5 flex-shrink-0" />
+                  <span class="text-gray-500 text-xs leading-relaxed">
+                    I understand that Plug & Play Peptides operates through licensed physicians and compounding pharmacies. All product dispensing is subject to physician approval. I agree to promote products truthfully and in compliance with applicable laws.
+                  </span>
+                </label>
+              </div>
+
+              {/* Submit */}
+              <button type="submit" id="submit-btn" class="btn-black w-full justify-center py-4 text-base rounded-xl" style="border-radius:14px;">
+                Submit Application
+              </button>
+
+              <p class="text-center text-gray-400 text-xs">
+                <i class="fas fa-lock text-xs mr-1"></i>Confidential · No commitment required
+              </p>
+            </form>
+
+            {/* Success state */}
+            <div id="success-message" class="hidden text-center py-16 px-6">
+              <div class="w-16 h-16 rounded-full bg-green-100 border border-green-200 flex items-center justify-center mx-auto mb-5">
+                <i class="fas fa-check text-green-600 text-xl"></i>
+              </div>
+              <h3 class="font-bold text-gray-900 text-2xl mb-3">Application received.</h3>
+              <p class="text-gray-500 mb-2">Our team will reach out within <strong class="text-gray-900">48 business hours</strong>.</p>
+              <p class="text-gray-400 text-sm mb-8">Check your inbox — we'll send a confirmation shortly.</p>
+              <a href="/" class="btn-outline-black">Back to Home</a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    {/* ===== JS for form behavior ===== */}
     <script dangerouslySetInnerHTML={{ __html: `
-      // Pre-select type from URL query param
-      (function() {
-        const params = new URLSearchParams(window.location.search);
-        const type = params.get('type');
-        if (type === 'influencer') selectType('influencer');
+      // Pre-select from URL
+      (function(){
+        const t = new URLSearchParams(window.location.search).get('type');
+        if (t === 'influencer') selectType('influencer');
       })();
 
       function selectType(type) {
-        const btnBusiness = document.getElementById('btn-business');
-        const btnInfluencer = document.getElementById('btn-influencer');
-        const businessFields = document.getElementById('business-fields');
-        const influencerFields = document.getElementById('influencer-fields');
-        const partnerType = document.getElementById('partner-type');
+        const bb = document.getElementById('btn-business');
+        const bi = document.getElementById('btn-influencer');
+        const bf = document.getElementById('business-fields');
+        const inf = document.getElementById('influencer-fields');
+        document.getElementById('partner-type').value = type;
 
         if (type === 'business') {
-          btnBusiness.classList.add('bg-emerald-600', 'text-white');
-          btnBusiness.classList.remove('text-slate-400');
-          btnInfluencer.classList.remove('bg-emerald-600', 'text-white');
-          btnInfluencer.classList.add('text-slate-400');
-          businessFields.classList.remove('hidden');
-          influencerFields.classList.add('hidden');
-          partnerType.value = 'business';
+          bb.classList.add('bg-white','text-gray-900','shadow-sm');
+          bb.classList.remove('text-gray-500');
+          bi.classList.remove('bg-white','text-gray-900','shadow-sm');
+          bi.classList.add('text-gray-500');
+          bf.classList.remove('hidden');
+          inf.classList.add('hidden');
         } else {
-          btnInfluencer.classList.add('bg-emerald-600', 'text-white');
-          btnInfluencer.classList.remove('text-slate-400');
-          btnBusiness.classList.remove('bg-emerald-600', 'text-white');
-          btnBusiness.classList.add('text-slate-400');
-          influencerFields.classList.remove('hidden');
-          businessFields.classList.add('hidden');
-          partnerType.value = 'influencer';
+          bi.classList.add('bg-white','text-gray-900','shadow-sm');
+          bi.classList.remove('text-gray-500');
+          bb.classList.remove('bg-white','text-gray-900','shadow-sm');
+          bb.classList.add('text-gray-500');
+          inf.classList.remove('hidden');
+          bf.classList.add('hidden');
         }
       }
 
@@ -377,26 +294,24 @@ export const applyPage = () => (
         const btn = document.getElementById('submit-btn');
         btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
         btn.disabled = true;
-
-        const formData = new FormData(this);
-
         try {
-          const response = await fetch('/api/apply', {
-            method: 'POST',
-            body: formData
-          });
-          const data = await response.json();
+          const res = await fetch('/api/apply', { method: 'POST', body: new FormData(this) });
+          const data = await res.json();
           if (data.success) {
             document.getElementById('apply-form').classList.add('hidden');
             document.getElementById('success-message').classList.remove('hidden');
-            window.scrollTo({ top: document.getElementById('success-message').offsetTop - 100, behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
           }
-        } catch (err) {
-          btn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i>Submit My Application';
+        } catch(err) {
+          btn.innerHTML = 'Submit Application';
           btn.disabled = false;
-          alert('Something went wrong. Please try again or email us directly.');
+          alert('Something went wrong. Please try again.');
         }
       });
+
+      // Nav scroll shadow
+      const header = document.getElementById('site-header');
+      if (header) window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 10));
     ` }} />
   </>
 )
