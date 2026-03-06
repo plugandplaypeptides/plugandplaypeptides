@@ -1,17 +1,33 @@
+// Image sourced from image_search tool (license-filtered)
+const HERO_IMG = 'https://sspark.genspark.ai/cfimages?u1=ZdowuU602ahWL4IcSs5hMShhG1QbJ0YZFvtHBh32Mec03d0%2BmXNE2Wtxv7tw3HV1UhItixvyFrDuzKnV%2FhFmgIubCydpsDvWB9v0C%2BlqZvjxhJj8Xjngy%2FmV49P4970zhsOAzUDsp18Jx%2BuceLgVCk7ZCJh4NUEzvPLYIAfLJceksLMCCo9CLAJYRic%3D&u2=eVUZt9TGwAzZCnnY&width=2560'
+
 export const applyPage = () => (
   <>
+    {/* Apply page hero banner */}
+    <section class="relative h-56 md:h-72 overflow-hidden bg-black">
+      <img src={HERO_IMG} alt="Health and vitality" class="w-full h-full object-cover object-center opacity-40" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
+      <div class="absolute inset-0 flex items-center justify-center text-center px-6">
+        <div>
+          <span class="tag-green mx-auto mb-4"><span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse inline-block mr-1"></span>Applications Open</span>
+          <h1 class="display-serif text-white" style="font-size:clamp(2rem,5vw,3.5rem);">Apply to Partner</h1>
+          <p class="text-gray-300 mt-2 text-base">Takes 5 minutes · Response within 48 hours</p>
+        </div>
+      </div>
+    </section>
+
     <section class="section-white py-20">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
           {/* ── LEFT: Context panel ── */}
           <div class="lg:sticky lg:top-24">
-            <span class="label-caps block mb-4">Partner Application</span>
-            <h1 class="display-sans text-gray-900 mb-5" style="font-size:clamp(2rem,4vw,3.25rem);">
-              Let's build your<br />peptide brand.
-            </h1>
-            <p class="text-gray-500 text-lg leading-relaxed mb-10">
-              Complete the form and our team will review your application and reach out within <strong class="text-gray-900">48 hours</strong>.
+            <span class="label-caps block mb-4">Why apply now?</span>
+            <h2 class="display-sans text-gray-900 mb-5" style="font-size:clamp(1.8rem,3vw,2.5rem);">
+              The brands that win<br />this market are applying<br /><span style="color:#16a34a">today.</span>
+            </h2>
+            <p class="text-gray-500 text-base leading-relaxed mb-8">
+              We accept a limited number of partners per niche and geography. Once a category is at capacity, we close applications. Don't let a competitor own your audience's peptide purchases.
             </p>
 
             {/* What happens next */}
