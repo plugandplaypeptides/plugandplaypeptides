@@ -8,6 +8,35 @@ export const renderer = jsxRenderer(({ children, title }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{title ? `${title} | Plug and Play Peptides` : 'Plug and Play Peptides — Launch Your Own Peptide Brand'}</title>
         <meta name="description" content="Partner with Plug and Play Peptides to launch your own branded peptide product line — sold compliantly through licensed physicians. For businesses and influencers." />
+        <link rel="canonical" href="https://www.plugandplaypeptides.com" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Plug and Play Peptides" />
+        <meta property="og:title" content={title ? `${title} | Plug and Play Peptides` : 'Plug and Play Peptides — Launch Your Own Peptide Brand'} />
+        <meta property="og:description" content="Partner with Plug and Play Peptides to launch your own branded peptide product line — sold compliantly through licensed physicians. For businesses and influencers." />
+        <meta property="og:url" content="https://www.plugandplaypeptides.com" />
+
+        {/* Twitter/X Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@plugandplaypeptides" />
+        <meta name="twitter:title" content={title ? `${title} | Plug and Play Peptides` : 'Plug and Play Peptides — Launch Your Own Peptide Brand'} />
+        <meta name="twitter:description" content="Partner with Plug and Play Peptides to launch your own branded peptide product line — sold compliantly through licensed physicians. For businesses and influencers." />
+
+        {/* Schema — Organization */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Plug and Play Peptides",
+          "url": "https://www.plugandplaypeptides.com",
+          "logo": "https://www.plugandplaypeptides.com/favicon.svg",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "partners@plugandplaypeptides.com",
+            "contactType": "Partner Inquiries"
+          }
+        })}} />
+
         <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23111'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='system-ui,sans-serif' font-size='18' font-weight='bold' fill='%234ade80'%3EP%3C/text%3E%3C/svg%3E" />
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,300;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
