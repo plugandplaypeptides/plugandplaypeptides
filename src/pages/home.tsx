@@ -713,7 +713,7 @@ export const homePage = () => (
           <div class="absolute inset-0 bg-black/60"></div>
           <div class="absolute inset-0 flex items-center justify-center text-center px-8">
             <div>
-              <p class="text-white text-2xl md:text-3xl font-bold leading-tight mb-2" style="font-family:'Playfair Display',serif;font-style:italic;">"This is the most profitable thing I've ever added to my business."</p>
+              <p class="text-white text-2xl md:text-3xl font-bold leading-tight mb-2" style="font-family:'DM Serif Display',serif;font-style:italic;">"This is the most profitable thing I've ever added to my business."</p>
               <p class="text-gray-300 text-sm">— Wellness Brand Owner, Austin TX · Joined 2024</p>
             </div>
           </div>

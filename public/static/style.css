@@ -3,16 +3,17 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: #fff; color: #111; }
+body { font-family: 'DM Sans', system-ui, -apple-system, sans-serif; background: #fff; color: #111; }
 
 /* ── TYPOGRAPHY ── */
 .display-serif {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'DM Serif Display', Georgia, serif;
   line-height: 1.08;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
+  font-weight: 400;
 }
 .display-sans {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   line-height: 1.1;
   letter-spacing: -0.03em;
   font-weight: 800;
@@ -112,7 +113,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: #
   font-weight: 900;
   line-height: 1;
   color: #f3f4f6;
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   letter-spacing: -0.04em;
   user-select: none;
 }
