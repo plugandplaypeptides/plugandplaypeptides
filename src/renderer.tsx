@@ -99,9 +99,12 @@ export const renderer = jsxRenderer(({ children, title }) => {
         {/* ── FOOTER ── */}
         <footer class="bg-gray-950 text-white pt-16 pb-10">
           <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+            {/* Main grid */}
             <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-gray-800">
 
-              <div class="md:col-span-5">
+              {/* Brand + description */}
+              <div class="md:col-span-4">
                 <a href="/" class="flex items-center gap-2.5 mb-5">
                   <div class="w-7 h-7 rounded-md bg-white flex items-center justify-center">
                     <i class="fas fa-dna text-black text-xs"></i>
@@ -110,10 +113,10 @@ export const renderer = jsxRenderer(({ children, title }) => {
                     plug<span class="text-green-400">&</span>play peptides
                   </span>
                 </a>
-                <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                <p class="text-gray-400 text-sm leading-relaxed mb-6" style="max-width:260px;">
                   The end-to-end white-label platform for brands and creators ready to enter the peptide market — legally, quickly, profitably.
                 </p>
-                <div class="flex gap-4 mt-6">
+                <div class="flex gap-3">
                   {['instagram','twitter','linkedin','youtube'].map(s => (
                     <a href="#" class="w-8 h-8 rounded-full border border-gray-700 flex items-center justify-center text-gray-500 hover:text-white hover:border-gray-400 transition-colors">
                       <i class={`fab fa-${s} text-xs`}></i>
@@ -122,28 +125,80 @@ export const renderer = jsxRenderer(({ children, title }) => {
                 </div>
               </div>
 
-              <div class="md:col-span-3 md:col-start-7">
-                <p class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Partners</p>
+              {/* Navigation */}
+              <div class="md:col-span-2 md:col-start-6">
+                <p class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Platform</p>
                 <ul class="space-y-2.5">
-                  {[['/#how-it-works','How It Works'],['/#businesses','For Businesses'],['/#influencers','For Influencers'],['/#catalog','Products'],['/apply','Apply Now']].map(([href, label]) => (
+                  {[
+                    ['/#how-it-works','How It Works'],
+                    ['/#businesses','For Businesses'],
+                    ['/#influencers','For Influencers'],
+                    ['/#catalog','Products'],
+                    ['/cmo','CMO Suite'],
+                    ['/apply','Apply Now'],
+                  ].map(([href, label]) => (
                     <li><a href={href} class="text-sm text-gray-400 hover:text-white transition-colors">{label}</a></li>
                   ))}
                 </ul>
               </div>
 
-              <div class="md:col-span-3">
-                <p class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Contact</p>
+              {/* Legal links */}
+              <div class="md:col-span-2">
+                <p class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Legal</p>
                 <ul class="space-y-2.5">
-                  <li><a href="mailto:partners@plugandplaypeptides.com" class="text-sm text-gray-400 hover:text-white transition-colors">partners@plugandplaypeptides.com</a></li>
-                  <li><a href="/apply" class="text-sm text-gray-400 hover:text-white transition-colors">Partner Inquiries</a></li>
+                  {[
+                    ['/terms','Terms of Service'],
+                    ['/privacy','Privacy Policy'],
+                    ['/refund','Refund Policy'],
+                  ].map(([href, label]) => (
+                    <li><a href={href} class="text-sm text-gray-400 hover:text-white transition-colors">{label}</a></li>
+                  ))}
                 </ul>
+              </div>
+
+              {/* Contact */}
+              <div class="md:col-span-3">
+                <p class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Contact &amp; Support</p>
+                <ul class="space-y-3">
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-envelope text-gray-600 text-xs mt-0.5 flex-shrink-0"></i>
+                    <a href="mailto:help@plugandplaypeptides.com" class="text-sm text-gray-400 hover:text-white transition-colors break-all">help@plugandplaypeptides.com</a>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-phone text-gray-600 text-xs mt-0.5 flex-shrink-0"></i>
+                    <a href="tel:+14156197661" class="text-sm text-gray-400 hover:text-white transition-colors">415-619-7661</a>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-clock text-gray-600 text-xs mt-0.5 flex-shrink-0"></i>
+                    <span class="text-sm text-gray-500">Mon–Fri, 9am–5pm MT</span>
+                  </li>
+                  <li class="flex items-start gap-2 pt-1">
+                    <i class="fas fa-map-marker-alt text-gray-600 text-xs mt-0.5 flex-shrink-0"></i>
+                    <address class="text-sm text-gray-500 not-italic leading-relaxed">
+                      1001 S Main St, Suite 12636<br />
+                      Kalispell, MT 59901
+                    </address>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            {/* Bottom bar */}
+            <div class="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+              <div>
+                <p class="text-gray-600 text-xs mb-1">© 2026 Plug and Play Peptides, LLC. All rights reserved.</p>
+                <p class="text-gray-700 text-xs">A Montana Limited Liability Company · 1001 S Main St, Suite 12636, Kalispell, MT 59901</p>
+              </div>
+              <div class="flex flex-wrap gap-4 items-center">
+                <a href="/terms" class="text-gray-700 text-xs hover:text-gray-400 transition-colors">Terms</a>
+                <a href="/privacy" class="text-gray-700 text-xs hover:text-gray-400 transition-colors">Privacy</a>
+                <a href="/refund" class="text-gray-700 text-xs hover:text-gray-400 transition-colors">Refunds</a>
+                <span class="text-gray-800 text-xs">|</span>
+                <span class="text-gray-700 text-xs">Visa · Mastercard · Amex · Discover accepted</span>
               </div>
             </div>
 
-            <div class="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-              <p class="text-gray-600 text-xs">© 2026 Plug and Play Peptides. All rights reserved.</p>
-              <p class="text-gray-700 text-xs max-w-md text-right leading-relaxed">All peptide products are dispensed exclusively through licensed, board-certified physicians via our compounding pharmacy network.</p>
-            </div>
           </div>
         </footer>
 
