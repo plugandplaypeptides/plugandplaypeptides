@@ -16,119 +16,72 @@ export const cmoPage = () => (
   <>
 
     {/* ══════════════════════════════════════════════════════════
-        § 1  HERO
-        Full-bleed split: editorial left column + image mosaic right.
-        The headline is the page. Everything else is context.
+        § 1  HERO — Full viewport, image IS the design.
+        100vh background photograph. Gradient overlay.
+        Headline in the lower-left in large DM Serif italic white.
+        Nothing else competes. This is how Hims opens.
     ══════════════════════════════════════════════════════════ */}
-    <section class="section-white overflow-hidden" style="padding-top:5rem; padding-bottom:0;">
+    <section class="cmo-hero-fullvp" id="cmo-hero">
 
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="cmo-hero-grid">
-
-          {/* ── Left: the argument ── */}
-          <div class="cmo-hero-left">
-            <span class="tag-green mb-8 inline-flex" style="font-size:0.68rem;">
-              <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse inline-block"></span>
-              CMO Marketing Suite
-            </span>
-
-            {/* THE headline — nothing competes with it */}
-            <h1 class="display-serif cmo-headline" id="cmo-h1">
-              Creating a Legit<br />
-              Peptide Company<br />
-              is the Easy Part.<br /><br />
-              Competing with<br />
-              Silicon Valley<br />
-              Giants is<br />
-              the Hard Part.<br /><br />
-              <em class="cmo-headline-em">Until Now.</em>
-            </h1>
-
-            <p class="cmo-hero-sub">
-              The brands winning in this space aren't winning because they have a better product.
-              They're winning because they have a machine — and now you do too.
-            </p>
-
-            <div class="flex flex-wrap gap-4 mt-10">
-              <a href="/apply?type=business" class="btn-black" style="font-size:1rem; padding:15px 34px;">
-                Apply as a Business →
-              </a>
-              <a href="/apply?type=influencer" class="btn-outline-black" style="font-size:1rem; padding:14px 34px;">
-                Apply as a Creator
-              </a>
-            </div>
-
-            {/* Scrolling desire ribbon */}
-            <div class="cmo-desire-ribbon marquee-wrap mt-12">
-              <div class="cmo-desire-track marquee-left" style="width:max-content;">
-                {[
-                  'Patients who never leave',
-                  'Revenue while you sleep',
-                  'Retention on autopilot',
-                  'A brand they remember',
-                  'The machine behind Hims',
-                  'Compounding LTV',
-                  'Patients who never leave',
-                  'Revenue while you sleep',
-                  'Retention on autopilot',
-                  'A brand they remember',
-                  'The machine behind Hims',
-                  'Compounding LTV',
-                ].map((phrase, i) => (
-                  <span key={i} class="cmo-desire-pill">
-                    <svg width="6" height="6" viewBox="0 0 6 6" fill="#16a34a"><circle cx="3" cy="3" r="3"/></svg>
-                    {phrase}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* ── Right: image mosaic ── */}
-          <div class="cmo-hero-mosaic" aria-hidden="true">
-            <div class="cmo-mosaic-inner">
-
-              {/* Big card — lifestyle athlete */}
-              <div class="cmo-mosaic-big cmo-parallax" data-speed="0.06">
-                <img src={IMGS.heroAthlete} alt="" class="w-full h-full object-cover" loading="eager" />
-                {/* Floating stat badge */}
-                <div class="cmo-float-badge cmo-float-badge--br">
-                  <span class="cmo-badge-num">76%</span>
-                  <span class="cmo-badge-label">reorder within 60 days</span>
-                </div>
-              </div>
-
-              {/* Small top-right card */}
-              <div class="cmo-mosaic-sm-top cmo-parallax" data-speed="-0.04">
-                <img src={IMGS.womanSmiling} alt="" class="w-full h-full object-cover" />
-                <div class="cmo-float-badge cmo-float-badge--tl">
-                  <span class="cmo-badge-num">3×</span>
-                  <span class="cmo-badge-label">higher LTV</span>
-                </div>
-              </div>
-
-              {/* Small bottom-right card */}
-              <div class="cmo-mosaic-sm-bot cmo-parallax" data-speed="0.08">
-                <img src={IMGS.coupleJog} alt="" class="w-full h-full object-cover" />
-                <div class="cmo-float-badge cmo-float-badge--tr">
-                  <span class="cmo-badge-num">2–4 wks</span>
-                  <span class="cmo-badge-label">to launch</span>
-                </div>
-              </div>
-
-              {/* Ambient green blob */}
-              <div class="cmo-blob-hero" aria-hidden="true"></div>
-            </div>
-          </div>
-
-        </div>
+      {/* Background photograph — fills the entire viewport */}
+      <div class="cmo-hero-bg" aria-hidden="true">
+        <img
+          src={IMGS.heroAthlete}
+          alt=""
+          class="cmo-hero-bg-img"
+          id="cmo-hero-img"
+          loading="eager"
+        />
+        {/* Multi-layer gradient: top vignette + strong bottom-to-top dark ramp */}
+        <div class="cmo-hero-overlay"></div>
+        {/* Subtle green tint to hint at brand */}
+        <div class="cmo-hero-tint"></div>
       </div>
 
-      {/* Full-bleed competitor strip */}
-      <div class="cmo-competitor-strip mt-20">
+      {/* Headline — anchored bottom-left, white, large DM Serif italic */}
+      <div class="cmo-hero-content">
+
+        {/* Eyebrow — small, subtle, top-left */}
+        <div class="cmo-hero-eyebrow">
+          <span class="cmo-hero-eyebrow-dot"></span>
+          CMO Marketing Suite
+        </div>
+
+        {/* THE headline. Three staggered lines. The image is the punctuation. */}
+        <h1 class="cmo-hero-h1" id="cmo-hero-h1">
+          <span class="cmo-h1-line" style="animation-delay:0.1s;">Creating a Legit Peptide</span>
+          <span class="cmo-h1-line" style="animation-delay:0.22s;">Company is the Easy Part.</span>
+          <span class="cmo-h1-line cmo-h1-gap" style="animation-delay:0.36s;">&nbsp;</span>
+          <span class="cmo-h1-line" style="animation-delay:0.48s;">Competing with Silicon</span>
+          <span class="cmo-h1-line" style="animation-delay:0.60s;">Valley Giants is</span>
+          <span class="cmo-h1-line" style="animation-delay:0.72s;">the Hard Part.</span>
+          <span class="cmo-h1-line cmo-h1-gap" style="animation-delay:0.84s;">&nbsp;</span>
+          <span class="cmo-h1-line cmo-h1-until" style="animation-delay:0.96s;"><em>Until Now.</em></span>
+        </h1>
+
+        {/* CTA row — bottom left, below headline */}
+        <div class="cmo-hero-cta" style="animation-delay:1.1s;">
+          <a href="/apply?type=business" class="cmo-hero-btn-primary">
+            Apply as a Business →
+          </a>
+          <a href="/apply?type=influencer" class="cmo-hero-btn-ghost">
+            Apply as a Creator
+          </a>
+        </div>
+
+      </div>
+
+      {/* Scroll nudge — center bottom */}
+      <div class="cmo-hero-scroll-hint" aria-hidden="true">
+        <div class="cmo-scroll-line"></div>
+        <span>scroll</span>
+      </div>
+
+      {/* Competitor strip — stuck to bottom of hero, dark bar */}
+      <div class="cmo-competitor-strip">
         <p class="cmo-strip-label">You're competing against</p>
-        <div class="marquee-wrap">
-          <div class="flex gap-12 marquee-left" style="width:max-content; padding: 16px 0;">
+        <div class="marquee-wrap" style="flex:1; overflow:hidden;">
+          <div class="flex gap-12 marquee-left" style="width:max-content; padding:0;">
             {['Hims & Hers','Roman','Ro Health','Noom Med','Found','Calibrate','Sequence','Sesame Care','Cerebral','Done',
               'Hims & Hers','Roman','Ro Health','Noom Med','Found','Calibrate','Sequence','Sesame Care','Cerebral','Done'].map((n,i) => (
               <span key={i} class="cmo-competitor-name">{n}</span>
@@ -565,189 +518,239 @@ export const cmoPage = () => (
     ────────────────────────────────────────────── */}
     <style dangerouslySetInnerHTML={{ __html: `
 
-      /* ── Hero grid ── */
-      .cmo-hero-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: flex-start;
-        padding-bottom: 0;
-      }
-      @media (max-width: 1023px) {
-        .cmo-hero-grid { grid-template-columns: 1fr; gap: 3rem; }
-        .cmo-hero-mosaic { display: none; }
+      /* ══════════════════════════════════════════
+         HERO — Full viewport image hero
+         Photograph IS the design. Text overlays it.
+      ══════════════════════════════════════════ */
+
+      /* Remove the default pt-16 body padding for this section only */
+      #cmo-hero { margin-top: -4px; }
+
+      .cmo-hero-fullvp {
+        position: relative;
+        width: 100%;
+        height: 100svh;
+        min-height: 700px;
+        max-height: 1000px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
       }
 
-      /* ── Hero headline ── */
-      .cmo-headline {
-        font-size: clamp(2.4rem, 4.2vw, 4.6rem);
-        line-height: 1.06;
-        letter-spacing: -0.01em;
-        color: #111;
-        margin-bottom: 2rem;
+      /* Background photograph */
+      .cmo-hero-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
       }
-      .cmo-headline-em {
-        color: #16a34a;
-        font-style: italic;
+      .cmo-hero-bg-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 60% center;
+        transform: scale(1.04);
+        animation: heroKenBurns 18s ease-in-out forwards;
       }
-      .cmo-hero-sub {
-        color: #4b5563;
-        font-size: 1.1rem;
-        line-height: 1.7;
-        max-width: 420px;
-        font-weight: 400;
+      @keyframes heroKenBurns {
+        from { transform: scale(1.04); }
+        to   { transform: scale(1.0);  }
       }
 
-      /* ── Desire ribbon ── */
-      .cmo-desire-ribbon {
-        border-top: 1px solid #e5e7eb;
-        padding-top: 1rem;
+      /* Gradient overlay — heavy at bottom, light at top */
+      .cmo-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(to bottom,
+            rgba(0,0,0,0.22) 0%,
+            rgba(0,0,0,0.10) 30%,
+            rgba(0,0,0,0.55) 65%,
+            rgba(0,0,0,0.82) 100%);
       }
-      .cmo-desire-track { display: flex; gap: 1.25rem; }
-      .cmo-desire-pill {
+
+      /* Subtle green brand tint on bottom third */
+      .cmo-hero-tint {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top,
+          rgba(22,163,74,0.12) 0%,
+          transparent 45%);
+      }
+
+      /* Content — positioned bottom-left, z-index above overlays */
+      .cmo-hero-content {
+        position: relative;
+        z-index: 2;
+        margin-top: auto;
+        padding: 0 clamp(1.5rem, 6vw, 5rem) 6rem;
+        max-width: 920px;
+      }
+
+      /* Eyebrow — small pill top-left, appears first */
+      .cmo-hero-eyebrow {
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        padding: 8px 16px;
-        border-radius: 100px;
-        border: 1.5px solid #e5e7eb;
-        background: #fff;
-        color: #374151;
-        font-size: 0.78rem;
+        color: rgba(255,255,255,0.7);
+        font-size: 0.7rem;
         font-weight: 600;
-        white-space: nowrap;
-        flex-shrink: 0;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        opacity: 0;
+        animation: heroFadeUp 0.6s ease 0.05s forwards;
       }
-
-      /* ── Hero mosaic ── */
-      .cmo-hero-mosaic {
-        position: relative;
-        height: 620px;
-        top: -1rem;
-      }
-      .cmo-mosaic-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-      }
-      .cmo-mosaic-big {
-        position: absolute;
-        top: 0; left: 0;
-        width: 64%; height: 72%;
-        border-radius: 24px;
-        overflow: hidden;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-      }
-      .cmo-mosaic-sm-top {
-        position: absolute;
-        top: 0; right: 0;
-        width: 33%; height: 48%;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 12px 40px rgba(0,0,0,0.10);
-      }
-      .cmo-mosaic-sm-bot {
-        position: absolute;
-        bottom: 0; right: 0;
-        width: 33%; height: 32%;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 12px 40px rgba(0,0,0,0.10);
-      }
-      /* Stacked bottom-left of mosaic */
-      .cmo-mosaic-big::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.18) 100%);
-      }
-      .cmo-mosaic-sm-top::after,
-      .cmo-mosaic-sm-bot::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.2) 100%);
-      }
-      /* ambient green blob in mosaic */
-      .cmo-blob-hero {
-        position: absolute;
-        bottom: -40px; left: -40px;
-        width: 280px; height: 280px;
+      .cmo-hero-eyebrow-dot {
+        width: 6px; height: 6px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(22,163,74,0.18) 0%, transparent 70%);
-        animation: meshDrift 14s ease-in-out infinite;
-        pointer-events: none;
-        z-index: -1;
+        background: #4ade80;
+        animation: pulse 2s ease-in-out infinite;
       }
 
-      /* ── Float stat badges on images ── */
-      .cmo-float-badge {
-        position: absolute;
+      /* The headline — DM Serif Display, white, stacked lines */
+      .cmo-hero-h1 {
+        font-family: 'DM Serif Display', Georgia, serif;
+        font-weight: 400;
+        font-size: clamp(2.8rem, 6.5vw, 7rem);
+        line-height: 1.04;
+        letter-spacing: -0.02em;
+        color: #fff;
+        margin: 0 0 2.5rem;
         display: flex;
         flex-direction: column;
-        gap: 2px;
-        background: rgba(255,255,255,0.92);
-        backdrop-filter: blur(8px);
-        border-radius: 14px;
-        padding: 10px 14px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.10);
-        z-index: 10;
-        min-width: 100px;
       }
-      .cmo-float-badge--br { bottom: 16px; right: 16px; }
-      .cmo-float-badge--tl { top: 12px; left: 12px; }
-      .cmo-float-badge--tr { top: 12px; right: 12px; }
-      .cmo-badge-num {
-        font-family: 'DM Sans', sans-serif;
-        font-weight: 800;
-        font-size: 1.1rem;
+
+      /* Each line animates in independently */
+      .cmo-h1-line {
+        display: block;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: heroFadeUp 0.65s cubic-bezier(0.22,1,0.36,1) forwards;
+      }
+      .cmo-h1-gap { line-height: 0.35; }
+      .cmo-h1-until {
+        color: #4ade80;
+        font-style: italic;
+      }
+      .cmo-h1-until em { font-style: italic; }
+
+      @keyframes heroFadeUp {
+        from { opacity: 0; transform: translateY(22px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      /* CTA row */
+      .cmo-hero-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        opacity: 0;
+        animation: heroFadeUp 0.6s ease forwards;
+      }
+      .cmo-hero-btn-primary {
+        display: inline-flex;
+        align-items: center;
+        background: #fff;
         color: #111;
-        letter-spacing: -0.04em;
-        line-height: 1;
+        font-size: 0.95rem;
+        font-weight: 700;
+        padding: 14px 32px;
+        border-radius: 100px;
+        text-decoration: none;
+        transition: background 0.2s, transform 0.15s;
+        letter-spacing: -0.01em;
       }
-      .cmo-badge-label {
-        font-size: 0.65rem;
+      .cmo-hero-btn-primary:hover { background: #f3f4f6; transform: translateY(-1px); }
+      .cmo-hero-btn-ghost {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(255,255,255,0.12);
+        color: #fff;
+        font-size: 0.95rem;
         font-weight: 600;
-        color: #6b7280;
-        white-space: nowrap;
+        padding: 13px 32px;
+        border-radius: 100px;
+        border: 1.5px solid rgba(255,255,255,0.35);
+        text-decoration: none;
+        transition: background 0.2s, border-color 0.2s;
+        backdrop-filter: blur(6px);
+      }
+      .cmo-hero-btn-ghost:hover {
+        background: rgba(255,255,255,0.20);
+        border-color: rgba(255,255,255,0.6);
       }
 
-      /* ── Parallax images ── */
-      .cmo-parallax { will-change: transform; }
+      /* Scroll hint — center bottom of hero */
+      .cmo-hero-scroll-hint {
+        position: absolute;
+        bottom: 5.5rem;
+        right: clamp(1.5rem, 4vw, 4rem);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        color: rgba(255,255,255,0.45);
+        font-size: 0.62rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        opacity: 0;
+        animation: heroFadeUp 0.6s ease 1.3s forwards;
+      }
+      .cmo-scroll-line {
+        width: 1px;
+        height: 40px;
+        background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
+        animation: scrollPulse 2s ease-in-out infinite;
+      }
+      @keyframes scrollPulse {
+        0%, 100% { opacity: 0.5; transform: scaleY(1); }
+        50%       { opacity: 1;   transform: scaleY(0.7); }
+      }
 
-      /* ── Competitor strip ── */
+      /* Competitor strip — dark, stuck to bottom of hero */
       .cmo-competitor-strip {
-        background: #f9f9f7;
-        border-top: 1px solid #ebebeb;
-        border-bottom: 1px solid #ebebeb;
-        padding: 14px 0;
+        position: relative;
+        z-index: 3;
+        background: rgba(8,8,8,0.88);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(255,255,255,0.07);
+        padding: 13px 0;
         display: flex;
         align-items: center;
         gap: 2rem;
         overflow: hidden;
+        flex-shrink: 0;
       }
       .cmo-strip-label {
         flex-shrink: 0;
-        padding-left: 2rem;
-        font-size: 0.68rem;
+        padding-left: clamp(1.5rem, 4vw, 3rem);
+        font-size: 0.62rem;
         font-weight: 600;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
-        color: #9ca3af;
+        color: rgba(255,255,255,0.3);
         white-space: nowrap;
       }
       .cmo-competitor-name {
         font-family: 'DM Sans', sans-serif;
-        font-size: 0.85rem;
+        font-size: 0.78rem;
         font-weight: 700;
-        letter-spacing: -0.02em;
-        color: #d1d5db;
+        letter-spacing: 0.06em;
+        color: rgba(255,255,255,0.22);
         white-space: nowrap;
         flex-shrink: 0;
         text-transform: uppercase;
         transition: color 0.2s;
       }
-      .cmo-competitor-name:hover { color: #9ca3af; }
+      .cmo-competitor-name:hover { color: rgba(255,255,255,0.55); }
+
+      /* Mobile: shrink hero headline */
+      @media (max-width: 640px) {
+        .cmo-hero-h1 { font-size: clamp(2.2rem, 9vw, 3.5rem); }
+        .cmo-hero-content { padding-bottom: 5rem; }
+      }
 
       /* ── Section 2: Problem ── */
       .cmo-problem-grid {
@@ -1080,25 +1083,18 @@ export const cmoPage = () => (
       const feedContainer = document.getElementById('cmo-feed');
       if (feedContainer) feedObs.observe(feedContainer);
 
-      /* ── Parallax on mosaic images ── */
-      const parallaxEls = document.querySelectorAll('.cmo-parallax');
-      let ticking = false;
-      window.addEventListener('scroll', () => {
-        if (ticking) return;
-        requestAnimationFrame(() => {
-          const scrollY = window.scrollY;
-          parallaxEls.forEach(el => {
-            const speed = parseFloat(el.dataset.speed || '0');
-            el.style.transform = 'translateY(' + (scrollY * speed) + 'px)';
-          });
-          ticking = false;
-        });
-        ticking = true;
-      });
-
       /* ── Nav shadow ── */
       const header = document.getElementById('site-header');
       if (header) window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 10));
+
+      /* ── Hero image subtle scroll parallax ── */
+      const heroBg = document.getElementById('cmo-hero-img');
+      if (heroBg) {
+        window.addEventListener('scroll', () => {
+          const y = window.scrollY;
+          heroBg.style.transform = 'scale(1.04) translateY(' + (y * 0.3) + 'px)';
+        }, { passive: true });
+      }
 
       /* ── Animate progress bar on scroll ── */
       const barObs = new IntersectionObserver((entries) => {
