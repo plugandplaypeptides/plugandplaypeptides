@@ -66,7 +66,7 @@ export const renderer = jsxRenderer(({ children, title }) => {
                 <a href="/#businesses" class="text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium">For Businesses</a>
                 <a href="/#influencers" class="text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium">For Influencers</a>
                 <a href="/#catalog" class="text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium">Products</a>
-                <a href="/cmo" class="text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium">CMO Suite</a>
+
               </nav>
 
               {/* CTA */}
@@ -87,7 +87,6 @@ export const renderer = jsxRenderer(({ children, title }) => {
             <a href="/#businesses" class="block py-2.5 text-sm text-gray-600 hover:text-gray-900 font-medium">For Businesses</a>
             <a href="/#influencers" class="block py-2.5 text-sm text-gray-600 hover:text-gray-900 font-medium">For Influencers</a>
             <a href="/#catalog" class="block py-2.5 text-sm text-gray-600 hover:text-gray-900 font-medium">Products</a>
-            <a href="/cmo" class="block py-2.5 text-sm text-gray-600 hover:text-gray-900 font-medium">CMO Suite</a>
             <a href="/apply" class="block mt-3 bg-black text-white text-sm font-semibold px-5 py-3 rounded-full text-center hover:bg-gray-800 transition-colors">Apply to Partner</a>
           </div>
         </header>
@@ -134,7 +133,6 @@ export const renderer = jsxRenderer(({ children, title }) => {
                     ['/#businesses','For Businesses'],
                     ['/#influencers','For Influencers'],
                     ['/#catalog','Products'],
-                    ['/cmo','CMO Suite'],
                     ['/apply','Apply Now'],
                   ].map(([href, label]) => (
                     <li><a href={href} class="text-sm text-gray-400 hover:text-white transition-colors">{label}</a></li>

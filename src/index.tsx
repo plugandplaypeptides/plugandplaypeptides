@@ -2,7 +2,6 @@ import { Hono } from 'hono'
 import { renderer } from './renderer'
 import { homePage } from './pages/home'
 import { applyPage } from './pages/apply'
-import { cmoPage } from './pages/cmo'
 import { privacyPage } from './pages/privacy'
 import { termsPage } from './pages/terms'
 import { agreementPage } from './pages/agreement'
@@ -18,11 +17,6 @@ app.use(renderer)
 // Home Page
 app.get('/', (c) => {
   return c.render(homePage(), { title: '' })
-})
-
-// CMO Marketing Suite Page
-app.get('/cmo', (c) => {
-  return c.render(cmoPage(), { title: 'The CMO Marketing Suite' })
 })
 
 // Apply / Partner Page
