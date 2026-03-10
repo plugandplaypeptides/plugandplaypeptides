@@ -5,7 +5,7 @@ import { applyPage } from './pages/apply'
 import { cmoPage } from './pages/cmo'
 import { privacyPage } from './pages/privacy'
 import { termsPage } from './pages/terms'
-import { refundPage } from './pages/refund'
+import { agreementPage } from './pages/agreement'
 import { serveStatic } from 'hono/cloudflare-workers'
 
 const app = new Hono()
@@ -41,6 +41,10 @@ app.get('/terms', (c) => {
 
 app.get('/refund', (c) => {
   return c.render(refundPage(), { title: 'Refund & Cancellation Policy' })
+})
+
+app.get('/agreement', (c) => {
+  return c.render(agreementPage(), { title: 'Partner Agreement' })
 })
 
 // Form submission handler

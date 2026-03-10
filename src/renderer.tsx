@@ -150,6 +150,7 @@ export const renderer = jsxRenderer(({ children, title }) => {
                     ['/terms','Terms of Service'],
                     ['/privacy','Privacy Policy'],
                     ['/refund','Refund Policy'],
+                    ['/agreement','Partner Agreement'],
                   ].map(([href, label]) => (
                     <li><a href={href} class="text-sm text-gray-400 hover:text-white transition-colors">{label}</a></li>
                   ))}
