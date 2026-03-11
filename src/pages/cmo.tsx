@@ -9,7 +9,7 @@ const IMGS = {
 }
 
 export const cmoPage = () => (
-  <>
+  <div id="cmo-page">
 
     {/* ─────────────────────────────────────────────────────
         SECTION 1 · HERO
@@ -289,12 +289,12 @@ export const cmoPage = () => (
               "Month one I made $22,400. But what actually surprised me was month three — I hadn't run a single new ad. The revenue came from patients who already ordered."
             </blockquote>
             <div style="display:flex; align-items:center; gap:1rem; padding-top:1.5rem; border-top:1px solid #E8E4DC;">
-              <div style="width:44px; height:44px; border-radius:50%; background:#1A1A1A; color:#FFFFFF; font-family:'DM Sans',sans-serif; font-weight:700; font-size:0.9rem; display:flex; align-items:center; justify-content:center; flex-shrink:0;">A</div>
+              <div style="width:44px; height:44px; background:#1A1A1A; color:#FFFFFF; font-family:'DM Sans',sans-serif; font-weight:700; font-size:0.9rem; display:flex; align-items:center; justify-content:center; flex-shrink:0;">A</div>
               <div>
                 <p style="font-family:'DM Sans',sans-serif; font-size:0.9rem; font-weight:700; color:#1A1A1A;">Alex M.</p>
                 <p style="font-family:'DM Sans',sans-serif; font-size:0.8rem; color:#9A9A9A;">Fitness Creator · 800K followers</p>
               </div>
-              <div style="margin-left:auto; background:#F0F7F0; border:1px solid #C8E0C8; padding:6px 14px; border-radius:999px;">
+              <div style="margin-left:auto; background:#F0F7F0; border:1px solid #C8E0C8; padding:6px 14px;">
                 <p style="font-family:'DM Sans',sans-serif; font-size:0.75rem; font-weight:700; color:#2D6A2D; white-space:nowrap;">$22,400 month one</p>
               </div>
             </div>
@@ -325,7 +325,7 @@ export const cmoPage = () => (
               </div>
               <p style="font-family:'DM Sans',sans-serif; font-size:1rem; color:#3A3A3A; line-height:1.75; font-style:italic; margin-bottom:2rem;">"{t.quote}"</p>
               <div style="display:flex; align-items:center; gap:0.75rem; padding-top:1.25rem; border-top:1px solid #E8E4DC;">
-                <div style="width:36px; height:36px; border-radius:50%; background:#1A1A1A; color:#FFFFFF; font-family:'DM Sans',sans-serif; font-weight:700; font-size:0.8rem; display:flex; align-items:center; justify-content:center; flex-shrink:0;">{t.initial}</div>
+                <div style="width:36px; height:36px; background:#1A1A1A; color:#FFFFFF; font-family:'DM Sans',sans-serif; font-weight:700; font-size:0.8rem; display:flex; align-items:center; justify-content:center; flex-shrink:0;">{t.initial}</div>
                 <div>
                   <p style="font-family:'DM Sans',sans-serif; font-size:0.85rem; font-weight:700; color:#1A1A1A;">{t.name}</p>
                   <p style="font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#9A9A9A;">{t.role}</p>
@@ -418,6 +418,11 @@ export const cmoPage = () => (
     ───────────────────────────────────────────────────── */}
     <style dangerouslySetInnerHTML={{__html:`
 
+      /* ── ZERO BORDER RADIUS — everything on this page is sharp ── */
+      #cmo-page, #cmo-page * {
+        border-radius: 0 !important;
+      }
+
       /* ── Typography tokens ── */
       .hims-h1 {
         font-family: 'DM Serif Display', Georgia, 'Times New Roman', serif;
@@ -461,7 +466,7 @@ export const cmoPage = () => (
         font-weight: 600;
         letter-spacing: 0.02em;
         padding: 15px 36px;
-        border-radius: 999px;
+        border-radius: 0;
         text-decoration: none;
         transition: background 0.2s, transform 0.15s;
         white-space: nowrap;
@@ -478,7 +483,7 @@ export const cmoPage = () => (
         font-weight: 600;
         letter-spacing: 0.02em;
         padding: 14px 36px;
-        border-radius: 999px;
+        border-radius: 0;
         border: 1.5px solid #1A1A1A;
         text-decoration: none;
         transition: background 0.2s, transform 0.15s;
@@ -496,7 +501,7 @@ export const cmoPage = () => (
         font-weight: 600;
         letter-spacing: 0.02em;
         padding: 15px 36px;
-        border-radius: 999px;
+        border-radius: 0;
         text-decoration: none;
         transition: background 0.2s, transform 0.15s;
         white-space: nowrap;
@@ -513,7 +518,7 @@ export const cmoPage = () => (
         font-weight: 600;
         letter-spacing: 0.02em;
         padding: 14px 36px;
-        border-radius: 999px;
+        border-radius: 0;
         border: 1.5px solid rgba(255,255,255,0.35);
         text-decoration: none;
         transition: border-color 0.2s, color 0.2s, transform 0.15s;
@@ -550,5 +555,5 @@ export const cmoPage = () => (
 
     `}} />
 
-  </>
+  </div>
 )
