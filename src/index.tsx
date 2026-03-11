@@ -1,6 +1,7 @@
 import { Hono } from 'hono'
 import { renderer } from './renderer'
 import { homePage } from './pages/home'
+import { homeV2Page } from './pages/home_v2'
 import { applyPage } from './pages/apply'
 import { cmoPage } from './pages/cmo'
 import { privacyPage } from './pages/privacy'
@@ -18,6 +19,11 @@ app.use(renderer)
 // Home Page
 app.get('/', (c) => {
   return c.render(homePage(), { title: '' })
+})
+
+// Home V2 — New design system (preview only)
+app.get('/home-v2', (c) => {
+  return c.render(homeV2Page(), { title: 'Home V2 Preview' })
 })
 
 // CMO Marketing Suite Page
